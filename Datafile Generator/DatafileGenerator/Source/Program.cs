@@ -253,7 +253,7 @@ public static class Program
                 if (flag)
                 {
                     //replacements get stat rid + count(alternate_passive_additions) + 1
-                    passiveSkillIndex = (byte)(alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + NumAdditions + 1);
+                    passiveSkillIndex = (byte)(alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + NumAdditions);
                 }
                 else
                 {
@@ -366,6 +366,7 @@ public static class Program
             });
         response = AnsiConsole.Prompt(fileTextPrompt);
     }
+    
     private static void PromptUserForChoice(string query, List<string> choices, out int response)
     {
         SelectionPrompt<string> fileTextPrompt = new SelectionPrompt<string>().Title(query);
