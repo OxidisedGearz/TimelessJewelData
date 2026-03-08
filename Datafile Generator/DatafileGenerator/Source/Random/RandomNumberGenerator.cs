@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using DatafileGenerator.Data.Models;
 using DatafileGenerator.Game;
 
@@ -21,10 +20,7 @@ public class RandomNumberGenerator
 
         state = default;
 
-        Initialize(Array.Empty<uint>()
-            .Append(passiveSkill.GraphIdentifier)
-            .Append(timelessJewel.Seed)
-            .ToArray());
+        Initialize(passiveSkill.GraphIdentifier, timelessJewel.Seed);
     }
 
     private static uint ManipulateAlpha(uint value)
@@ -71,7 +67,7 @@ public class RandomNumberGenerator
         return ((roll + a) + 0x80000000);
     }
 
-    private void Initialize(uint[] seeds)
+    private void Initialize(uint seed0, uint seed1)
     {
         state = new uint[]
         {
@@ -84,7 +80,7 @@ public class RandomNumberGenerator
 
         uint index = 1;
 
-        for (int i = 0; i < seeds.Length; i++)
+        for (int i = 0; i < 2; i++)
         {
             uint roundState = ManipulateAlpha(
                 state[(index % 4) + 1] ^
@@ -93,7 +89,7 @@ public class RandomNumberGenerator
 
             state[((index + 1) % 4) + 1] += roundState;
 
-            roundState += (seeds[i] + index);
+            roundState += (((i == 0) ? seed0 : seed1) + index);
 
             state[(((index + 1) + 1) % 4) + 1] += roundState;
             state[(index % 4) + 1] = roundState;

@@ -21,6 +21,7 @@ public static class Program
     private const int ExpectedArgumentCount = 5;
     private static int NumAdditions;
     private static bool IsInteractiveMode = true;
+    private static IReadOnlyDictionary<uint, AlternateTreeVersion> AlternateTreeVersionsByIndex;
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
     private const string CsvFileName = "node_indices.csv";
 
@@ -61,6 +62,7 @@ public static class Program
 
         if (!DataManager.Initialize())
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
+        AlternateTreeVersionsByIndex = DataManager.AlternateTreeVersions.ToDictionary(q => q.Index);
         NumAdditions = DataManager.AlternatePassiveAdditions.Count;
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
@@ -181,21 +183,20 @@ public static class Program
     private static void GenerateGloriousVanity(List<PassiveSkill> nodes, out int[] luaDefinitions, out byte[] data)
     {
         GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+        int seedMinimumIndex = jewelMin / jewelIncrement;
+        int seedMaximumIndex = jewelMax / jewelIncrement;
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         //the datafile header. cant use out params in anonymous methods
         byte[] header = new byte[maxSeed * nodes.Count];
         //the actual information for the jewels. will convert to 1d later
         byte[][] data2d = new byte[maxSeed * nodes.Count][];
-        //nested parallell tasks, in case your cpu wasnt on fire yet
         Parallel.For(0, nodes.Count, nodeIndex =>
         {
             var node = nodes[nodeIndex];
-            Parallel.For(jewelMin / jewelIncrement, jewelMax / jewelIncrement + 1, i =>
+            for (int seedIndex = seedMinimumIndex; seedIndex <= seedMaximumIndex; seedIndex++)
             {
-                //which jewel seed is this
-                i *= jewelIncrement;
-                int jewelSeed = i;
-                int jewelIndex = (jewelSeed - jewelMin) / jewelIncrement;
+                int jewelSeed = (seedIndex * jewelIncrement);
+                int jewelIndex = (seedIndex - seedMinimumIndex);
                 int jewelType = 1;
                 //modify the tree using that jewel
                 TimelessJewel timelessJewelFromInput = GetTimelessJewel((uint)jewelSeed, (uint)jewelType);
@@ -203,37 +204,34 @@ public static class Program
                     Program.ExitWithError("Failed to get the [yellow]timeless jewel[/] from input.");
                 //determine how the particular node was modified
                 var alternateTreeManager = new AlternateTreeManager(node, timelessJewelFromInput);
-                //GV will always replace nodes
-                var indices = new List<byte>();
-                var rolls = new List<byte>();
                 var skillInfo = alternateTreeManager.ReplacePassiveSkill();
+                byte[] dataEntry;
                 //handle might/legacy of the vaal
                 if (skillInfo.AlternatePassiveSkill.Index == LegacyOfTheVaal || skillInfo.AlternatePassiveSkill.Index == MightOfTheVaal)
                 {
-                    //do we want to add the indicator for this being Legacy of the Vaal/Might of the Vaal or just shit out the stats?
-                    //indices.Add((byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions));
-                    for (int k = 0; k < skillInfo.AlternatePassiveAdditionInformations.Count; k++)
+                    int additionCount = skillInfo.AlternatePassiveAdditionInformations.Count;
+                    dataEntry = new byte[additionCount * 2];
+                    for (int k = 0; k < additionCount; k++)
                     {
-                        //add the additions
-                        indices.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index);
-                        rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0U]);
+                        AlternatePassiveAdditionInformation additionInformation = skillInfo.AlternatePassiveAdditionInformations[k];
+                        dataEntry[k] = (byte)additionInformation.AlternatePassiveAddition.Index;
+                        dataEntry[additionCount + k] = (byte)additionInformation.StatRolls[0];
                     }
                 }
                 //handle all others
                 else
                 {
-                    indices.Add((byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions));
-                    for (int k = 0; k < skillInfo.StatRolls.Count; k++)
-                    {
-                        rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
-                    }
+                    int rollCount = skillInfo.StatRolls.Count;
+                    dataEntry = new byte[rollCount + 1];
+                    dataEntry[0] = (byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions);
+                    for (int k = 0; k < rollCount; k++)
+                        dataEntry[k + 1] = (byte)skillInfo.StatRolls[k];
                 }
                 //save the data
-                var dataEntry = new List<byte>(indices);
-                dataEntry.AddRange(rolls);
-                header[nodeIndex * maxSeed + jewelIndex] = (byte)dataEntry.Count;
-                data2d[nodeIndex * maxSeed + jewelIndex] = dataEntry.ToArray();
-            });
+                int dataIndex = ((nodeIndex * maxSeed) + jewelIndex);
+                header[dataIndex] = (byte)dataEntry.Length;
+                data2d[dataIndex] = dataEntry;
+            }
         });
         //write the data
         var outputData = new List<byte>(header);
@@ -252,39 +250,27 @@ public static class Program
     private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, out byte[] data)
     {
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+        int seedMinimumIndex = jewelMin / jewelIncrement;
+        int seedMaximumIndex = jewelMax / jewelIncrement;
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
         //for non glorious vanity, we only care about notables
         Parallel.For(0, nodes.Count, notableIndex =>
         {
             var notable = nodes[notableIndex];
-            Parallel.For(jewelMin / jewelIncrement, jewelMax / jewelIncrement + 1, i =>
+            for (int seedIndex = seedMinimumIndex; seedIndex <= seedMaximumIndex; seedIndex++)
             {
-                //which jewel seed is this
-                i *= jewelIncrement;
-                int jewel_seed = i;
-                int jewel_index = (jewel_seed - jewelMin) / jewelIncrement;
-                int jewel_type = jewelType;
+                int jewel_seed = (seedIndex * jewelIncrement);
+                int jewel_index = (seedIndex - seedMinimumIndex);
                 //modify the tree using that jewel
-                TimelessJewel timelessJewelFromInput = GetTimelessJewel((uint)jewel_seed, (uint)jewel_type);
+                TimelessJewel timelessJewelFromInput = GetTimelessJewel((uint)jewel_seed, (uint)jewelType);
                 if (timelessJewelFromInput == null)
                     Program.ExitWithError("Failed to get the [yellow]timeless jewel[/] from input.");
                 //figure out how it affects this specific notable
                 var alternateTreeManager = new AlternateTreeManager(notable, timelessJewelFromInput);
-                bool flag = alternateTreeManager.IsPassiveSkillReplaced();
-                byte passiveSkillIndex = 0;
-                if (flag)
-                {
-                    //replacements get stat rid + count(alternate_passive_additions)
-                    passiveSkillIndex = (byte)(alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + NumAdditions);
-                }
-                else
-                {
-                    //additions get stat rid as is
-                    passiveSkillIndex = (byte)alternateTreeManager.AugmentPassiveSkill().First().AlternatePassiveAddition.Index;
-                }
+                byte passiveSkillIndex = alternateTreeManager.GetRegularPassiveSkillIndex((uint)NumAdditions);
                 dataInternal[notableIndex * maxSeed + jewel_index] = passiveSkillIndex;
-            });
+            }
         });
         data = dataInternal;
     }
@@ -352,8 +338,8 @@ public static class Program
 
     private static TimelessJewel GetTimelessJewel(uint seed, uint jewelType)
     {
-        AlternateTreeVersion alternateTreeVersion = DataManager.AlternateTreeVersions
-            .First(q => (q.Index == jewelType));
+        if (!AlternateTreeVersionsByIndex.TryGetValue(jewelType, out AlternateTreeVersion alternateTreeVersion))
+            throw new InvalidOperationException($"No alternate tree version exists for jewel type {jewelType}.");
         return new TimelessJewel(alternateTreeVersion, seed);
     }
 
