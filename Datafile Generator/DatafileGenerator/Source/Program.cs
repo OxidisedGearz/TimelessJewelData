@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -15,25 +15,48 @@ namespace DatafileGenerator;
 
 public static class Program
 {
-
     private const int MightOfTheVaal = 76;
     private const int LegacyOfTheVaal = 77;
     private const int MaxBytesInFile = 5242880; //5MB
+    private const int ExpectedArgumentCount = 5;
     private static int NumAdditions;
+    private static bool IsInteractiveMode = true;
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
     private const string CsvFileName = "node_indices.csv";
 
-    public static void Main()
+    public static void Main(string[] args)
     {
         Console.Title = $"{GeneratorSettings.ApplicationName} (v{GeneratorSettings.ApplicationVersion})";
-        //prompt
         AnsiConsole.MarkupLine("Spinning up!");
-        PromptUserForFile("Path to [yellow]alternate passive ADDITIONS[/] file:", out GeneratorSettings.AlternatePassiveAdditionsFilePath);
-        PromptUserForFile("Path to [yellow]alternate passive SKILLS[/] file:", out GeneratorSettings.AlternatePassiveSkillsFilePath);
-        PromptUserForFile("Path to [yellow]skill tree[/] file:", out GeneratorSettings.PassiveSkillsFilePath);
-        PromptUserForFile("Path to [yellow]output[/] directory:", out string outputDir, true);
-        PromptUserForChoice("Output type:", new List<string>() { "compressed", "uncompressed", "both" }, out int compression);
-        compression += 1; //hacky but it turns it into a bitmask by doing this
+        if (IsHelpRequested(args))
+        {
+            PrintUsage();
+            return;
+        }
+        string outputDir;
+        int compression;
+        if (args != null && args.Length > 0)
+        {
+            IsInteractiveMode = false;
+            if (!TryParseCommandLineArguments(args, out outputDir, out compression, out string argumentError))
+            {
+                PrintUsage();
+                ExitWithError(argumentError);
+                return;
+            }
+            AnsiConsole.MarkupLine("[grey]Using command-line arguments.[/]");
+        }
+        else
+        {
+            IsInteractiveMode = true;
+
+            PromptUserForFile("Path to [yellow]alternate passive ADDITIONS[/] file:", out GeneratorSettings.AlternatePassiveAdditionsFilePath);
+            PromptUserForFile("Path to [yellow]alternate passive SKILLS[/] file:", out GeneratorSettings.AlternatePassiveSkillsFilePath);
+            PromptUserForFile("Path to [yellow]skill tree[/] file:", out GeneratorSettings.PassiveSkillsFilePath);
+            PromptUserForFile("Path to [yellow]output[/] directory:", out outputDir, true);
+            PromptUserForChoice("Output type:", new List<string>() { "compressed", "uncompressed", "both" }, out compression);
+            compression += 1; //hacky but it turns it into a bitmask by doing this
+        }
         AnsiConsole.MarkupLine("[green]Loading[/]...");
 
         if (!DataManager.Initialize())
@@ -61,9 +84,9 @@ public static class Program
         }
         File.WriteAllText(Path.Combine(outputDir, CsvFileName), sb.ToString());
         sb.Clear();
-        //begin iterating over the 5 jewel types
+        //begin iterating over the 6 jewel types
         //reverse order since glorious vanity sucks
-        for (int i = 5; i > 0; i--)
+        for (int i = 6; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
@@ -300,6 +323,12 @@ public static class Program
                 jewelIncrement = 20;
                 jewelName = "ElegantHubris";
                 break;
+            case 6:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "HeroicTragedy";
+                break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
                 jewelMin = 0;
@@ -328,18 +357,120 @@ public static class Program
         return new TimelessJewel(alternateTreeVersion, seed);
     }
 
-    private static void WaitForExit()
+    private static bool TryParseCommandLineArguments(string[] args, out string outputDir, out int compression, out string error)
     {
-        AnsiConsole.WriteLine();
-        AnsiConsole.MarkupLine("Press [yellow]any key[/] to exit.");
+        outputDir = null;
+        compression = 0;
+        error = null;
 
-        try
+        if (args.Length != ExpectedArgumentCount)
         {
-            Console.ReadKey();
+            error = $"Expected {ExpectedArgumentCount} arguments, received {args.Length}.";
+            return false;
         }
-        catch { }
 
-        Environment.Exit(0);
+        string additionsFilePath = args[0];
+        string skillsFilePath = args[1];
+        string treeFilePath = args[2];
+        outputDir = args[3];
+        string compressionMode = args[4];
+
+        if (!File.Exists(additionsFilePath))
+        {
+            error = $"Unable to find alternate passive additions file: '{additionsFilePath}'.";
+            return false;
+        }
+
+        if (!File.Exists(skillsFilePath))
+        {
+            error = $"Unable to find alternate passive skills file: '{skillsFilePath}'.";
+            return false;
+        }
+
+        if (!File.Exists(treeFilePath))
+        {
+            error = $"Unable to find skill tree file: '{treeFilePath}'.";
+            return false;
+        }
+
+        if (File.Exists(outputDir))
+        {
+            error = $"Output path points to a file, expected a directory: '{outputDir}'.";
+            return false;
+        }
+
+        if (!TryParseCompressionMode(compressionMode, out compression))
+        {
+            error = $"Unrecognized output type '{compressionMode}'. Use compressed, uncompressed, both, or 1/2/3.";
+            return false;
+        }
+
+        GeneratorSettings.AlternatePassiveAdditionsFilePath = additionsFilePath;
+        GeneratorSettings.AlternatePassiveSkillsFilePath = skillsFilePath;
+        GeneratorSettings.PassiveSkillsFilePath = treeFilePath;
+
+        return true;
+    }
+
+    private static bool TryParseCompressionMode(string compressionMode, out int compression)
+    {
+        compression = 0;
+
+        if (string.IsNullOrWhiteSpace(compressionMode))
+            return false;
+
+        if (int.TryParse(compressionMode, out int numericCompression) &&
+            numericCompression >= 1 && numericCompression <= 3)
+        {
+            compression = numericCompression;
+            return true;
+        }
+
+        switch (compressionMode.Trim().ToLowerInvariant())
+        {
+            case "compressed":
+                compression = 1;
+                return true;
+            case "uncompressed":
+                compression = 2;
+                return true;
+            case "both":
+                compression = 3;
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    private static bool IsHelpRequested(string[] args)
+    {
+        return args != null &&
+            args.Length == 1 &&
+            (args[0] == "-h" || args[0] == "--help" || args[0] == "/?");
+    }
+
+    private static void PrintUsage()
+    {
+        AnsiConsole.WriteLine("Usage:");
+        AnsiConsole.WriteLine("  DataFileGenerator <alternate_additions_json> <alternate_skills_json> <skill_tree_json> <output_dir> <output_type>");
+        AnsiConsole.WriteLine("  output_type: compressed | uncompressed | both | 1 | 2 | 3");
+    }
+
+    private static void WaitForExit(int exitCode = 0)
+    {
+        if (IsInteractiveMode)
+        {
+            AnsiConsole.WriteLine();
+            AnsiConsole.MarkupLine("Press [yellow]any key[/] to exit.");
+
+            try
+            {
+                Console.ReadKey();
+            }
+            catch { }
+        }
+
+        Environment.Exit(exitCode);
     }
 
     private static void PrintError(string error)
@@ -350,7 +481,7 @@ public static class Program
     private static void ExitWithError(string error)
     {
         PrintError(error);
-        WaitForExit();
+        WaitForExit(1);
     }
 
     private static void PromptUserForFile(string query, out string response, bool isDir = false)
@@ -366,7 +497,7 @@ public static class Program
             });
         response = AnsiConsole.Prompt(fileTextPrompt);
     }
-    
+
     private static void PromptUserForChoice(string query, List<string> choices, out int response)
     {
         SelectionPrompt<string> fileTextPrompt = new SelectionPrompt<string>().Title(query);

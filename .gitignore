@@ -1,0 +1,14 @@
+# Development tools
+.idea/
+.tools/
+.profile/
+.vs/
+.vscode/
+*.code-workspace
+inspect.lua
+
+# Development files
+*.lnk
+
+# Build files
+Datafile Generator/DatafileGenerator/Build/
