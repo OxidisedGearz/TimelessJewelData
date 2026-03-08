@@ -50,7 +50,7 @@ public class AlternateTreeManager
         if (PassiveSkill.IsKeyStone)
         {
             AlternatePassiveSkill alternatePassiveSkillKeyStone = DataManager.GetAlternatePassiveSkillKeyStone(TimelessJewel);
-            Dictionary<uint, uint> alternatePassiveSkillKeyStoneStatRolls = new Dictionary<uint, uint>()
+            Dictionary<uint, int> alternatePassiveSkillKeyStoneStatRolls = new Dictionary<uint, int>()
             {
                 { 0, alternatePassiveSkillKeyStone.StatAMinimumValue }
             };
@@ -77,7 +77,7 @@ public class AlternateTreeManager
                 rolledAlternatePassiveSkill = applicableAlternatePassiveSkill;
         }
 
-        Dictionary<uint, (uint minimumRoll, uint maximumRoll)> alternatePassiveSkillStatRollRanges = new Dictionary<uint, (uint minimumRoll, uint maximumRoll)>()
+        Dictionary<uint, (int minimumRoll, int maximumRoll)> alternatePassiveSkillStatRollRanges = new Dictionary<uint, (int minimumRoll, int maximumRoll)>()
         {
             { 0, (rolledAlternatePassiveSkill.StatAMinimumValue, rolledAlternatePassiveSkill.StatAMaximumValue) },
             { 1, (rolledAlternatePassiveSkill.StatBMinimumValue, rolledAlternatePassiveSkill.StatBMaximumValue) },
@@ -85,15 +85,15 @@ public class AlternateTreeManager
             { 3, (rolledAlternatePassiveSkill.StatDMinimumValue, rolledAlternatePassiveSkill.StatDMaximumValue) }
         };
 
-        Dictionary<uint, uint> alternatePassiveSkillStatRolls = new Dictionary<uint, uint>();
+        Dictionary<uint, int> alternatePassiveSkillStatRolls = new Dictionary<uint, int>();
 
         // Capping the maximum iterations at 4 for now.
         for (uint i = 0; i < Math.Min(rolledAlternatePassiveSkill.StatIndices.Count, 4); i++)
         {
-            uint alternatePassiveSkillStatRoll = alternatePassiveSkillStatRollRanges[i].minimumRoll;
+            int alternatePassiveSkillStatRoll = alternatePassiveSkillStatRollRanges[i].minimumRoll;
 
             if (alternatePassiveSkillStatRollRanges[i].maximumRoll > alternatePassiveSkillStatRollRanges[i].minimumRoll)
-                alternatePassiveSkillStatRoll = randomNumberGenerator.Generate(alternatePassiveSkillStatRollRanges[i].minimumRoll, alternatePassiveSkillStatRollRanges[i].maximumRoll);
+                alternatePassiveSkillStatRoll = (int)randomNumberGenerator.Generate((uint)alternatePassiveSkillStatRollRanges[i].minimumRoll, (uint)alternatePassiveSkillStatRollRanges[i].maximumRoll);
 
             alternatePassiveSkillStatRolls.Add(i, alternatePassiveSkillStatRoll);
         }
