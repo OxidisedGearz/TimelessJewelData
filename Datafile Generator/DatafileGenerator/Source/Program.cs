@@ -63,7 +63,7 @@ public static class Program
         sb.Clear();
         //begin iterating over the 5 jewel types
         //reverse order since glorious vanity sucks
-        for (int i = 5; i > 0; i--)
+        for (int i = 6; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
@@ -163,6 +163,16 @@ public static class Program
         byte[] header = new byte[maxSeed * nodes.Count];
         //the actual information for the jewels. will convert to 1d later
         byte[][] data2d = new byte[maxSeed * nodes.Count][];
+
+        //re-index our additions and replacements to consider only this jewel type
+        uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
+        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index)
+            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index + numAdditions))
+            .Select((x, i) => new { rid = x, index = (byte)i }).ToDictionary(x => x.rid, x => x.index);
+        if (jewelEffectOptions.Count > 256)
+        {
+            throw new Exception("Cannot safely construct file: possible indices greater than byte size");
+        }
         //nested parallell tasks, in case your cpu wasnt on fire yet
         Parallel.For(0, nodes.Count, nodeIndex =>
         {
@@ -187,19 +197,18 @@ public static class Program
                 //handle might/legacy of the vaal
                 if (skillInfo.AlternatePassiveSkill.Index == LegacyOfTheVaal || skillInfo.AlternatePassiveSkill.Index == MightOfTheVaal)
                 {
-                    //do we want to add the indicator for this being Legacy of the Vaal/Might of the Vaal or just shit out the stats?
-                    //indices.Add((byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions));
+                    //just shit out the stats, the fact that its legacy/might is implied
                     for (int k = 0; k < skillInfo.AlternatePassiveAdditionInformations.Count; k++)
                     {
                         //add the additions
-                        indices.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index);
+                        indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index]);
                         rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0U]);
                     }
                 }
                 //handle all others
                 else
                 {
-                    indices.Add((byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions));
+                    indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveSkill.Index + numAdditions]);
                     for (int k = 0; k < skillInfo.StatRolls.Count; k++)
                     {
                         rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
@@ -231,6 +240,15 @@ public static class Program
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
+        //re-index our additions and replacements to consider only this jewel type
+        uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
+        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index)
+            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index + numAdditions))
+            .Select((x, i) => new { rid = x, index = (byte)i }).ToDictionary(x => x.rid, x => x.index);
+        if (jewelEffectOptions.Count > 256)
+        {
+            throw new Exception("Cannot safely construct file: possible indices greater than byte size");
+        }
         //for non glorious vanity, we only care about notables
         Parallel.For(0, nodes.Count, notableIndex =>
         {
@@ -252,13 +270,11 @@ public static class Program
                 byte passiveSkillIndex = 0;
                 if (flag)
                 {
-                    //replacements get stat rid + count(alternate_passive_additions)
-                    passiveSkillIndex = (byte)(alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + NumAdditions);
+                    passiveSkillIndex = jewelEffectOptions[alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + numAdditions];
                 }
                 else
                 {
-                    //additions get stat rid as is
-                    passiveSkillIndex = (byte)alternateTreeManager.AugmentPassiveSkill().First().AlternatePassiveAddition.Index;
+                    passiveSkillIndex = jewelEffectOptions[alternateTreeManager.AugmentPassiveSkill().First().AlternatePassiveAddition.Index];
                 }
                 dataInternal[notableIndex * maxSeed + jewel_index] = passiveSkillIndex;
             });
@@ -299,6 +315,12 @@ public static class Program
                 jewelMax = 160000;
                 jewelIncrement = 20;
                 jewelName = "ElegantHubris";
+                break;
+            case 6:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "HeroicTragedy";
                 break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
@@ -366,7 +388,7 @@ public static class Program
             });
         response = AnsiConsole.Prompt(fileTextPrompt);
     }
-    
+
     private static void PromptUserForChoice(string query, List<string> choices, out int response)
     {
         SelectionPrompt<string> fileTextPrompt = new SelectionPrompt<string>().Title(query);

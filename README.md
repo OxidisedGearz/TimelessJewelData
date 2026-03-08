@@ -1,8 +1,8 @@
 # Using the data files
 
-### Parsing Brutal Restraint, Elegant Hubris, Lethal Pride, and Militant Faith
+### Parsing Brutal Restraint, Elegant Hubris, Lethal Pride, Militant Faith, and Heroic Tragedy
 
-Data files are uint8 arrays (1 byte per node+seed) in a pure binary format, where array\[node_id_INDEX \* jewel_seed_Size + jewel_seed_offset\] = index_of_Change
+Data files are uint8 arrays (1 byte per node+seed) in a pure binary format, where array\[node_id_INDEX \* jewel_seed_Size + jewel_seed_offset\] = index_of_change
 
 	node_id_INDEX is given by Node_Indices.csv
 	jewel_seed_Size is the number of seeds for a given jewel (note elegant hubris seeds are divided by 20)
@@ -10,12 +10,14 @@ Data files are uint8 arrays (1 byte per node+seed) in a pure binary format, wher
 
 A list of which nodes are in range of what jewel socket can be found in Jewel_Node_Link.json
 
-Also note that Node_Indices.csv contains indices for all modifiable nodes, but the non-Glorious Vanity jewels will only have data for notables (indices 0 to 390). Modifications to non-notables for these jewels are constant and thus have been omitted from their data files to save space.
+Also note that Node_Indices.csv contains indices for all modifiable nodes, but the non-Glorious Vanity jewels will only have data for notables. Modifications to non-notables for these jewels are constant and thus have been omitted from their data files to save space.
 
-index_of_Change is dependant on value, 
+to find index_of_change:
 
-	additions are index_of_Change = _rid in alternate_passive_additions.json
-	replacements are index_of_Change - 94 = _rid in alternate_passive_skills.json
+  parse alternate_passive_additions.json selecting only the entries that match the jewel type, ordered by _rid
+  parse alternate_passive_skills.json selecting only the entries that match the jewel type, ordered by _rid
+  concatenate the two, placing alternate_passive_additions before those of alternate_passive_skills
+  entry with index index_of_change will be the stat that was selected
 
 Non-Glorious Vanity jewels are relatively simple to parse with this definition:
 
@@ -40,8 +42,12 @@ like before:
 	jewel_seed_Size is the number of seeds for a given jewel
 	jewel_seed_offset is the value above the minimum
 
-	additions are index_of_Change = _rid in alternate_passive_additions.json
-	replacements are index_of_Change - 94 = _rid in alternate_passive_skills.json
+to find index_of_change:
+
+  parse alternate_passive_additions.json selecting only the entries that match the jewel type, ordered by _rid
+  parse alternate_passive_skills.json selecting only the entries that match the jewel type, ordered by _rid
+  concatenate the two, placing alternate_passive_additions before those of alternate_passive_skills
+  entry with index index_of_change will be the stat that was selected
 
 and data files are in a pure binary format with one byte per piece of information; however, with glorious vanity, each node requires multiple pieces of information.
 
@@ -52,7 +58,7 @@ For a jewel, each node can have multiple changes, and each change comes with 1 o
 
 To know the length of the header, we have the additional definition:
 
-	nodeCount is the number of nodes in the Node_Indices.csv (currently 1678)
+	nodeCount is the number of nodes in the Node_Indices.csv
 
 Because each node has more than 1 value associated with it, the recommended method for parsing it is a header array and a 2d array of data as follows:
 - create a header of size: nodeCount \* maxSeedIndex
@@ -99,4 +105,4 @@ It's built on top of a timeless jewel simulator, so its not very consice, but th
 
 It will need an alternate passive additions json, an alternate passive skills json, and the most recent skill tree json. You'll also have to tell it where to output and whether you want the compressed or uncompressed files.    
 
-Running it will output 5 datafiles, 1 lua file, and 1 csv file (note that if compressed, the Glorious Vanity "file" will actually come out to be multiple files each with size at most 5MB due to the limitations within Path of Building).
+Running it will output 6 datafiles, 1 lua file, and 1 csv file (note that if compressed, the Glorious Vanity "file" will actually come out to be multiple files each with size at most 5MB due to the limitations within Path of Building).

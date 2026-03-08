@@ -37,7 +37,8 @@ public static class DataManager
             new AlternateTreeVersion(2),
             new AlternateTreeVersion(3),
             new AlternateTreeVersion(4),
-            new AlternateTreeVersion(5)
+            new AlternateTreeVersion(5),
+            new AlternateTreeVersion(6)
         };
 
     public static List<AlternatePassiveAddition> GetApplicableAlternatePassiveAdditions(PassiveSkill passiveSkill, TimelessJewel timelessJewel)

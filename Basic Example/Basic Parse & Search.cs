@@ -1,9 +1,6 @@
 //notables are a dictionary of notable index and weight
 //stats are a dictionary of stat index and weight
-//definitions for both can be found at https://github.com/Regisle/TimelessJewelData
-//if Elegant Hubris & Militant Faith aren't working, try swapping their file names
-//there was a mixup with jewel type indices earlier that had them named backward the first time they were uploaded
-//and you might have the outdated names still
+//definitions for both notable and stat indices can be found at https://github.com/Regisle/TimelessJewelData
 private static IEnumerable<Tuple<int, double>> ExecuteNonGVSearch(Dictionary<int, double> notables, Dictionary<int, double> stats, double weight, int jewelType)
 {
     //DisplayInputs(notables, stats, weight, jewelType); pretty printed the inputs
@@ -34,6 +31,10 @@ private static IEnumerable<Tuple<int, double>> ExecuteNonGVSearch(Dictionary<int
             minSeed = 2000;
             maxSeed = 160000;
             seedIncrement = 20;
+            break;
+        case 6:
+            minSeed = 100;
+            maxSeed = 8000;
             break;
         default:
             break;
@@ -72,8 +73,6 @@ private static IEnumerable<Tuple<int, double>> ExecuteNonGVSearch(Dictionary<int
     Console.WriteLine("jewel seeds & weight:\n" + string.Join("\n", searchResult.Select(x => $"(seed: {string.Format("{0,6}", x.Item1)}\tweight: {x.Item2})")));
     return searchResult;
 }
-
-
 
 private static IEnumerable<Tuple<int, double>> ExecuteGVSearch(Dictionary<int, double> notables, Dictionary<int, double> stats, double weight)
 {
@@ -132,28 +131,28 @@ private static IEnumerable<Tuple<int, double>> ExecuteGVSearch(Dictionary<int, d
     return new List<Tuple<int, double>>();
 }
 
-
-
-
 private static FileStream? GetStreamForJewel(int jewelType)
 {
     string fileName;
     switch (jewelType)
     {
         case 1:
-            fileName = @"Glorious Vanity";
+            fileName = "GloriousVanity";
             break;
         case 2:
-            fileName = @"Lethal Pride";
+            fileName = "LethalPride";
             break;
         case 3:
-            fileName = @"Brutal Restraint";
+            fileName = "BrutalRestraint";
             break;
         case 4:
-            fileName = @"Militant Faith";
+            fileName = "MilitantFaith";
             break;
         case 5:
-            fileName = @"Elegant Hubris";
+            fileName = "ElegantHubris";
+            break;
+        case 6:
+            fileName = "HeroicTragedy";
             break;
         default:
             return null;

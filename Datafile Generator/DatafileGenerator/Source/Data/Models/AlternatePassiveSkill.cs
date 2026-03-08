@@ -15,28 +15,28 @@ public class AlternatePassiveSkill
     public IReadOnlyCollection<uint> StatIndices { get; init; }
 
     [JsonPropertyName("Stat1Min")]
-    public uint StatAMinimumValue { get; init; }
+    public int StatAMinimumValue { get; init; }
 
     [JsonPropertyName("Stat1Max")]
-    public uint StatAMaximumValue { get; init; }
+    public int StatAMaximumValue { get; init; }
 
     [JsonPropertyName("Stat2Min")]
-    public uint StatBMinimumValue { get; init; }
+    public int StatBMinimumValue { get; init; }
 
     [JsonPropertyName("Stat2Max")]
-    public uint StatBMaximumValue { get; init; }
+    public int StatBMaximumValue { get; init; }
 
     [JsonPropertyName("Unknown10")]
-    public uint StatCMinimumValue { get; init; }
+    public int StatCMinimumValue { get; init; }
 
     [JsonPropertyName("Unknown11")]
-    public uint StatCMaximumValue { get; init; }
+    public int StatCMaximumValue { get; init; }
 
     [JsonPropertyName("Unknown12")]
-    public uint StatDMinimumValue { get; init; }
+    public int StatDMinimumValue { get; init; }
 
     [JsonPropertyName("Unknown13")]
-    public uint StatDMaximumValue { get; init; }
+    public int StatDMaximumValue { get; init; }
 
     [JsonPropertyName("PassiveType")]
     public IReadOnlyCollection<uint> ApplicablePassiveTypes { get; init; }
