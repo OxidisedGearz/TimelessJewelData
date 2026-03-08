@@ -52,12 +52,12 @@ public class AlternateTreeManager
         return TimelessJewel.AlternateTreeVersion.AreSmallNormalPassiveSkillsReplaced;
     }
 
-    public byte GetRegularPassiveSkillIndex(uint alternatePassiveSkillOffset)
+    public uint GetRegularPassiveSkillIndex(uint alternatePassiveSkillOffset)
     {
         if (PassiveSkill.IsKeyStone)
         {
             AlternatePassiveSkill alternatePassiveSkillKeyStone = DataManager.GetAlternatePassiveSkillKeyStone(TimelessJewel);
-            return (byte)(alternatePassiveSkillKeyStone.Index + alternatePassiveSkillOffset);
+            return (alternatePassiveSkillKeyStone.Index + alternatePassiveSkillOffset);
         }
 
         bool isNotable = (PassiveSkillType == PassiveSkillType.Notable);
@@ -97,7 +97,7 @@ public class AlternateTreeManager
         if (isReplaced)
         {
             AlternatePassiveSkill rolledAlternatePassiveSkill = RollAlternatePassiveSkill(randomNumberGenerator);
-            return (byte)(rolledAlternatePassiveSkill.Index + alternatePassiveSkillOffset);
+            return (rolledAlternatePassiveSkill.Index + alternatePassiveSkillOffset);
         }
 
         uint minimumAdditions = TimelessJewel.AlternateTreeVersion.MinimumAdditions;
@@ -115,7 +115,7 @@ public class AlternateTreeManager
         while (rolledAlternatePassiveAddition == null)
             rolledAlternatePassiveAddition = RollAlternatePassiveAddition(randomNumberGenerator);
 
-        return (byte)rolledAlternatePassiveAddition.Index;
+        return rolledAlternatePassiveAddition.Index;
     }
 
     public AlternatePassiveSkillInformation ReplacePassiveSkill()

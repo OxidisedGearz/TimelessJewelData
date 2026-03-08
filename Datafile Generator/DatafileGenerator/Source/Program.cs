@@ -19,9 +19,12 @@ public static class Program
     private const int LegacyOfTheVaal = 77;
     private const int MaxBytesInFile = 5242880; //5MB
     private const int ExpectedArgumentCount = 5;
+    private const int MaxJewelType = 6;
     private static int NumAdditions;
     private static bool IsInteractiveMode = true;
     private static IReadOnlyDictionary<uint, AlternateTreeVersion> AlternateTreeVersionsByIndex;
+    private static IReadOnlyDictionary<int, IReadOnlyDictionary<uint, byte>> GlobalToLocalIdMappingsByJewelType;
+    private static IReadOnlyDictionary<int, IReadOnlyDictionary<byte, uint>> LocalToGlobalIdMappingsByJewelType;
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
     private const string CsvFileName = "node_indices.csv";
 
@@ -64,6 +67,7 @@ public static class Program
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
         AlternateTreeVersionsByIndex = DataManager.AlternateTreeVersions.ToDictionary(q => q.Index);
         NumAdditions = DataManager.AlternatePassiveAdditions.Count;
+        InitializeLocalIdMappings();
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
 
@@ -108,6 +112,7 @@ public static class Program
                     var node = notablesThenSmalls[k];
                     sb.AppendLine($"nodeIDList[{node.GraphIdentifier}] = {{ index = {k}, size = {luaSizes[k]} }}");
                 }
+                AppendLocalIdMappings(sb);
                 sb.Append("return nodeIDList");
                 File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName), sb.ToString());
                 sb.Clear();
@@ -180,8 +185,127 @@ public static class Program
         return DataManager.PassiveSkills.Where(x => x.IsModifiable && (!notables ^ x.IsNotable)).ToList();
     }
 
+    private static void InitializeLocalIdMappings()
+    {
+        Dictionary<int, IReadOnlyDictionary<uint, byte>> globalToLocalIdMappingsByJewelType = new Dictionary<int, IReadOnlyDictionary<uint, byte>>(MaxJewelType);
+        Dictionary<int, IReadOnlyDictionary<byte, uint>> localToGlobalIdMappingsByJewelType = new Dictionary<int, IReadOnlyDictionary<byte, uint>>(MaxJewelType);
+
+        for (int jewelType = 1; jewelType <= MaxJewelType; jewelType++)
+        {
+            HashSet<uint> globalIds = new HashSet<uint>();
+            uint alternateTreeVersionIndex = (uint)jewelType;
+
+            foreach (AlternatePassiveAddition alternatePassiveAddition in DataManager.AlternatePassiveAdditions)
+            {
+                if (alternatePassiveAddition.AlternateTreeVersionIndex == alternateTreeVersionIndex)
+                    globalIds.Add(alternatePassiveAddition.Index);
+            }
+
+            foreach (AlternatePassiveSkill alternatePassiveSkill in DataManager.AlternatePassiveSkills)
+            {
+                if (alternatePassiveSkill.AlternateTreeVersionIndex == alternateTreeVersionIndex)
+                    globalIds.Add((alternatePassiveSkill.Index + (uint)NumAdditions));
+            }
+
+            if (globalIds.Count > (byte.MaxValue + 1))
+            {
+                GetJewelTypeInfo(jewelType, out _, out _, out _, out string jewelName);
+                ExitWithError($"Jewel type [yellow]{jewelName}[/] requires [yellow]{globalIds.Count}[/] local ids, which exceeds 1-byte capacity.");
+            }
+
+            Dictionary<uint, byte> globalToLocal = new Dictionary<uint, byte>(globalIds.Count);
+            Dictionary<byte, uint> localToGlobal = new Dictionary<byte, uint>(globalIds.Count);
+            List<uint> overflowGlobalIds = new List<uint>();
+
+            foreach (uint globalId in globalIds.OrderBy(q => q))
+            {
+                if (globalId <= byte.MaxValue)
+                {
+                    byte localId = (byte)globalId;
+                    if (!localToGlobal.ContainsKey(localId))
+                    {
+                        globalToLocal.Add(globalId, localId);
+                        localToGlobal.Add(localId, globalId);
+                        continue;
+                    }
+                }
+                overflowGlobalIds.Add(globalId);
+            }
+
+            byte nextAvailableLocalId = 0;
+            for (int i = 0; i < overflowGlobalIds.Count; i++)
+            {
+                while (localToGlobal.ContainsKey(nextAvailableLocalId))
+                {
+                    if (nextAvailableLocalId == byte.MaxValue)
+                    {
+                        GetJewelTypeInfo(jewelType, out _, out _, out _, out string jewelName);
+                        ExitWithError($"No free 1-byte local ids remain for [yellow]{jewelName}[/].");
+                    }
+                    nextAvailableLocalId++;
+                }
+
+                uint overflowGlobalId = overflowGlobalIds[i];
+                globalToLocal.Add(overflowGlobalId, nextAvailableLocalId);
+                localToGlobal.Add(nextAvailableLocalId, overflowGlobalId);
+
+                if (nextAvailableLocalId < byte.MaxValue)
+                    nextAvailableLocalId++;
+            }
+
+            globalToLocalIdMappingsByJewelType.Add(jewelType, globalToLocal);
+            localToGlobalIdMappingsByJewelType.Add(jewelType, localToGlobal);
+        }
+
+        GlobalToLocalIdMappingsByJewelType = globalToLocalIdMappingsByJewelType;
+        LocalToGlobalIdMappingsByJewelType = localToGlobalIdMappingsByJewelType;
+    }
+
+    private static IReadOnlyDictionary<uint, byte> GetGlobalToLocalIdMapping(int jewelType)
+    {
+        if (GlobalToLocalIdMappingsByJewelType == null ||
+            !GlobalToLocalIdMappingsByJewelType.TryGetValue(jewelType, out IReadOnlyDictionary<uint, byte> mapping))
+        {
+            ExitWithError($"No local id mapping exists for jewel type [yellow]{jewelType}[/].");
+            throw new InvalidOperationException($"No local id mapping exists for jewel type {jewelType}.");
+        }
+        return mapping;
+    }
+
+    private static byte MapGlobalIdToLocalId(IReadOnlyDictionary<uint, byte> localIdMapping, int jewelType, uint globalId)
+    {
+        if (!localIdMapping.TryGetValue(globalId, out byte localId))
+        {
+            GetJewelTypeInfo(jewelType, out _, out _, out _, out string jewelName);
+            ExitWithError($"No local id mapping for [yellow]{jewelName}[/] global id [yellow]{globalId}[/].");
+        }
+        return localId;
+    }
+
+    private static void AppendLocalIdMappings(StringBuilder sb)
+    {
+        sb.AppendLine("nodeIDList[\"localIdToGlobalId\"] = { }");
+
+        for (int jewelType = 1; jewelType <= MaxJewelType; jewelType++)
+        {
+            if (LocalToGlobalIdMappingsByJewelType == null ||
+                !LocalToGlobalIdMappingsByJewelType.TryGetValue(jewelType, out IReadOnlyDictionary<byte, uint> localToGlobalIdMapping))
+            {
+                ExitWithError($"No reverse local id mapping exists for jewel type [yellow]{jewelType}[/].");
+                throw new InvalidOperationException($"No reverse local id mapping exists for jewel type {jewelType}.");
+            }
+
+            sb.AppendLine($"nodeIDList[\"localIdToGlobalId\"][{jewelType}] = {{ }}");
+            sb.AppendLine($"nodeIDList[\"localIdToGlobalId\"][{jewelType}][\"size\"] = {localToGlobalIdMapping.Count}");
+
+            foreach (KeyValuePair<byte, uint> keyValuePair in localToGlobalIdMapping.OrderBy(q => q.Key))
+                sb.AppendLine($"nodeIDList[\"localIdToGlobalId\"][{jewelType}][{keyValuePair.Key}] = {keyValuePair.Value}");
+        }
+    }
+
     private static void GenerateGloriousVanity(List<PassiveSkill> nodes, out int[] luaDefinitions, out byte[] data)
     {
+        IReadOnlyDictionary<uint, byte> localIdMapping = GetGlobalToLocalIdMapping(1);
         GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
         int seedMinimumIndex = jewelMin / jewelIncrement;
         int seedMaximumIndex = jewelMax / jewelIncrement;
@@ -214,7 +338,7 @@ public static class Program
                     for (int k = 0; k < additionCount; k++)
                     {
                         AlternatePassiveAdditionInformation additionInformation = skillInfo.AlternatePassiveAdditionInformations[k];
-                        dataEntry[k] = (byte)additionInformation.AlternatePassiveAddition.Index;
+                        dataEntry[k] = MapGlobalIdToLocalId(localIdMapping, 1, additionInformation.AlternatePassiveAddition.Index);
                         dataEntry[additionCount + k] = (byte)additionInformation.StatRolls[0];
                     }
                 }
@@ -223,7 +347,8 @@ public static class Program
                 {
                     int rollCount = skillInfo.StatRolls.Count;
                     dataEntry = new byte[rollCount + 1];
-                    dataEntry[0] = (byte)(skillInfo.AlternatePassiveSkill.Index + NumAdditions);
+                    uint replacementGlobalId = (skillInfo.AlternatePassiveSkill.Index + (uint)NumAdditions);
+                    dataEntry[0] = MapGlobalIdToLocalId(localIdMapping, 1, replacementGlobalId);
                     for (int k = 0; k < rollCount; k++)
                         dataEntry[k + 1] = (byte)skillInfo.StatRolls[k];
                 }
@@ -249,6 +374,7 @@ public static class Program
 
     private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, out byte[] data)
     {
+        IReadOnlyDictionary<uint, byte> localIdMapping = GetGlobalToLocalIdMapping(jewelType);
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
         int seedMinimumIndex = jewelMin / jewelIncrement;
         int seedMaximumIndex = jewelMax / jewelIncrement;
@@ -268,7 +394,8 @@ public static class Program
                     Program.ExitWithError("Failed to get the [yellow]timeless jewel[/] from input.");
                 //figure out how it affects this specific notable
                 var alternateTreeManager = new AlternateTreeManager(notable, timelessJewelFromInput);
-                byte passiveSkillIndex = alternateTreeManager.GetRegularPassiveSkillIndex((uint)NumAdditions);
+                uint passiveSkillGlobalIndex = alternateTreeManager.GetRegularPassiveSkillIndex((uint)NumAdditions);
+                byte passiveSkillIndex = MapGlobalIdToLocalId(localIdMapping, jewelType, passiveSkillGlobalIndex);
                 dataInternal[notableIndex * maxSeed + jewel_index] = passiveSkillIndex;
             }
         });
