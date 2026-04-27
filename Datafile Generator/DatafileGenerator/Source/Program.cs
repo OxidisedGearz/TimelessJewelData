@@ -1,15 +1,18 @@
-﻿using System;
+﻿using DatafileGenerator.Data;
+using DatafileGenerator.Data.Models;
+using DatafileGenerator.Game;
+using DatafileGenerator.Source.Data.Models;
+using ServiceStack.Text;
+using Spectre.Console;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Spectre.Console;
-using DatafileGenerator.Data;
-using DatafileGenerator.Data.Models;
-using DatafileGenerator.Game;
-using System.IO.Compression;
 
 namespace DatafileGenerator;
 
@@ -19,7 +22,6 @@ public static class Program
     private const int MightOfTheVaal = 76;
     private const int LegacyOfTheVaal = 77;
     private const int MaxBytesInFile = 5242880; //5MB
-    private static int NumAdditions;
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
     private const string CsvFileName = "node_indices.csv";
 
@@ -28,17 +30,32 @@ public static class Program
         Console.Title = $"{GeneratorSettings.ApplicationName} (v{GeneratorSettings.ApplicationVersion})";
         //prompt
         AnsiConsole.MarkupLine("Spinning up!");
-        PromptUserForFile("Path to [yellow]alternate passive ADDITIONS[/] file:", out GeneratorSettings.AlternatePassiveAdditionsFilePath);
-        PromptUserForFile("Path to [yellow]alternate passive SKILLS[/] file:", out GeneratorSettings.AlternatePassiveSkillsFilePath);
-        PromptUserForFile("Path to [yellow]skill tree[/] file:", out GeneratorSettings.PassiveSkillsFilePath);
-        PromptUserForFile("Path to [yellow]output[/] directory:", out string outputDir, true);
-        PromptUserForChoice("Output type:", new List<string>() { "compressed", "uncompressed", "both" }, out int compression);
-        compression += 1; //hacky but it turns it into a bitmask by doing this
+
+        GeneratorSettings.AlternatePassiveAdditionsFilePath = Path.GetFullPath(@"source-data\alternatepassiveadditions.json");
+        if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
+            PromptUserForFile("Path to [yellow]alternate passive ADDITIONS[/] file:", out GeneratorSettings.AlternatePassiveAdditionsFilePath);
+        }
+        GeneratorSettings.AlternatePassiveSkillsFilePath = Path.GetFullPath(@"source-data\alternatepassiveskills.json");
+        if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
+            PromptUserForFile("Path to [yellow]alternate passive SKILLS[/] file:", out GeneratorSettings.AlternatePassiveSkillsFilePath);
+        }
+        GeneratorSettings.PassiveSkillsFilePath = Path.GetFullPath(@"source-data\data.json");
+        if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
+            PromptUserForFile("Path to [yellow]skill tree[/] file:", out GeneratorSettings.PassiveSkillsFilePath);
+        }
+        var outputDir = Path.GetFullPath(@"output-data");
+        if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
+            PromptUserForFile("Path to [yellow]output[/] directory:", out outputDir, true);
+        }
+        
+        var exportOptions = new List<string>() { "compressed", "uncompressed", "csv", "both" };
+        PromptUserForChoice("Output type:", exportOptions, out int compressionChoice);
+        var compression = exportOptions.ElementAt(compressionChoice);
+
         AnsiConsole.MarkupLine("[green]Loading[/]...");
 
         if (!DataManager.Initialize())
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
-        NumAdditions = DataManager.AlternatePassiveAdditions.Count;
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
 
@@ -63,14 +80,19 @@ public static class Program
         sb.Clear();
         //begin iterating over the 5 jewel types
         //reverse order since glorious vanity sucks
+        string outputPath = null;
         for (int i = 6; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
             byte[] dataBuffer;
+            List<CsvExportRow> csvExport;
             //glorious vanity logic
             if (i == 1)
             {
+                // TODO - Remove this temporary skip logic for glorious vanity
+                continue;
+
                 //calculate
                 GenerateGloriousVanity(notablesThenSmalls, out var luaSizes, out dataBuffer);
                 //create the lua mapping file
@@ -90,23 +112,21 @@ public static class Program
             //non-glorious vanity logic
             else
             {
-                GenerateRegular(justNotables, i, out dataBuffer);
+                GenerateRegular(justNotables, i, out dataBuffer, out csvExport);
             }
             //output uncompressed
-            if ((compression & 2) == 2)
+            if (compression == "uncompressed" || compression == "both")
             {
-                string outputPath = Path.Combine(outputDir, outputFile);
+                outputPath = Path.Combine(outputDir, outputFile);
                 if (File.Exists(outputPath))
                 {
                     File.Delete(outputPath);
                 }
-                using (Stream file = File.OpenWrite(outputPath))
-                {
-                    file.Write(dataBuffer, 0, dataBuffer.Length);
-                }
+                using Stream file = File.OpenWrite(outputPath);
+                file.Write(dataBuffer, 0, dataBuffer.Length);
             }
             //output compressed
-            if ((compression & 1) == 1)
+            if (compression == "compressed" || compression == "both")
             {
                 byte[] compressedData = Compress(dataBuffer);
                 //need to split into multiple files because PoB is dumb
@@ -117,7 +137,7 @@ public static class Program
                     while (split.Any())
                     {
                         //write the data
-                        string outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, $"zip.part{splitIndex}"));
+                        outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, $"zip.part{splitIndex}"));
                         if (File.Exists(outputPath))
                         {
                             File.Delete(outputPath);
@@ -132,20 +152,33 @@ public static class Program
                 //file is small enough as is, just write the file
                 else
                 {
-                    string outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "zip"));
+                    outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "zip"));
                     if (File.Exists(outputPath))
                     {
                         File.Delete(outputPath);
                     }
-                    using (Stream file = File.OpenWrite(outputPath))
-                    {
-                        file.Write(compressedData, 0, compressedData.Length);
-                    }
+                    using Stream file = File.OpenWrite(outputPath);
+                    file.Write(compressedData, 0, compressedData.Length);
                 }
+            }
+            if (compression == "csv")
+            {
+                AnsiConsole.MarkupLine("Exporting CSVs");
+                outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv"));
+                if (File.Exists(outputPath))
+                {
+                    File.Delete(outputPath);
+                }
+
+                File.WriteAllText(outputPath, CsvSerializer.SerializeToCsv(csvExport));
             }
             //log completion
             sw.Stop();
             Console.WriteLine($"{outputFile} took {sw.Elapsed.TotalSeconds} seconds");
+            if (outputPath != null)
+            {
+                Console.WriteLine($"File available at: {outputPath}");
+            }
         }
         AnsiConsole.MarkupLine("[green]Done[/]!");
     }
@@ -235,20 +268,36 @@ public static class Program
         data = outputData.ToArray();
     }
 
-    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, out byte[] data)
+    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, out byte[] data, out List<CsvExportRow> csvData)
     {
-        GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+        GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
+
         //re-index our additions and replacements to consider only this jewel type
         uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
-        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index)
-            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index + numAdditions))
-            .Select((x, i) => new { rid = x, index = (byte)i }).ToDictionary(x => x.rid, x => x.index);
+
+        var jewelEffectOptions =
+            DataManager.AlternatePassiveAdditions
+                .Where(x => x.AlternateTreeVersionIndex == jewelType)
+                .Select(x => x.Index)
+                .Concat(
+                    DataManager.AlternatePassiveSkills
+                        .Where(x => x.AlternateTreeVersionIndex == jewelType)
+                        .Select(x => x.Index + numAdditions)
+                )
+                .Select((x, i) => new { rid = x, index = (byte)i })
+                .ToDictionary(x => x.rid, x => x.index);
+
+        var notableJewelReplacements = DataManager.AlternatePassiveSkills
+                .Where(x => x.AlternateTreeVersionIndex == jewelType)
+                .ToDictionary(x => x.Index, x => x);
+
         if (jewelEffectOptions.Count > 256)
         {
             throw new Exception("Cannot safely construct file: possible indices greater than byte size");
         }
+        var export = new ConcurrentBag<CsvExportRow>();
         //for non glorious vanity, we only care about notables
         Parallel.For(0, nodes.Count, notableIndex =>
         {
@@ -270,7 +319,9 @@ public static class Program
                 byte passiveSkillIndex = 0;
                 if (flag)
                 {
-                    passiveSkillIndex = jewelEffectOptions[alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index + numAdditions];
+                    var notableIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
+                    passiveSkillIndex = jewelEffectOptions[notableIndex + numAdditions];
+                    export.Add(new CsvExportRow(jewel_seed, jewelName, jewel_type, notable, notableIndex, notableJewelReplacements[notableIndex]));
                 }
                 else
                 {
@@ -280,6 +331,7 @@ public static class Program
             });
         });
         data = dataInternal;
+        csvData = export.ToList();
     }
 
     private static void GetJewelTypeInfo(int jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName)
@@ -346,7 +398,7 @@ public static class Program
     private static TimelessJewel GetTimelessJewel(uint seed, uint jewelType)
     {
         AlternateTreeVersion alternateTreeVersion = DataManager.AlternateTreeVersions
-            .First(q => (q.Index == jewelType));
+            .First(q => q.Index == jewelType);
         return new TimelessJewel(alternateTreeVersion, seed);
     }
 
@@ -378,7 +430,7 @@ public static class Program
     private static void PromptUserForFile(string query, out string response, bool isDir = false)
     {
         TextPrompt<string> fileTextPrompt = new TextPrompt<string>(query)
-            .Validate((string input) =>
+            .Validate(input =>
             {
                 if (!isDir && !File.Exists(input))
                 {

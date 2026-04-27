@@ -6,7 +6,37 @@
 		<Configurations>Debug;Release;aaaaaaaaa</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+		<PackageReference Include="ServiceStack" Version="10.0.6" />
+		<PackageReference Include="ServiceStack.Text" Version="10.0.6" />
+		<PackageReference Include="Spectre.Console" Version="0.55.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Source\Data\Models\AlternatePassiveAddition.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="Source\Data\Models\AlternatePassiveSkill.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="Source\Data\Models\AlternateTreeVersion.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="Source\Data\Models\PassiveSkill.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="Source\Data\Models\TreeDataFile.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="source-data\alternatepassiveadditions.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\alternatepassiveskills.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\data.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 	<Target Name="CopyContentFilesToOutputDirectory" AfterTargets="Build;CopyAllFilesToSingleFolderForPackage">
 		<ItemGroup>
