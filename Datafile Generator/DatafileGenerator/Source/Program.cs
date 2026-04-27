@@ -22,6 +22,7 @@ public static class Program
 
     private const int MightOfTheVaal = 76;
     private const int LegacyOfTheVaal = 77;
+
     private const int MaxBytesInFile = 5242880; //5MB
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
     private const string CsvFileName = "node_indices.csv";
@@ -50,9 +51,10 @@ public static class Program
             PromptUserForFile("Path to [yellow]output[/] directory:", out outputDir, true);
         }
         
-        var exportOptions = new List<string>() { "compressed", "uncompressed", "csv", "both" };
+        var exportOptions = new List<string>() { "compressed", "uncompressed", "both", "csv" };
         PromptUserForChoice("Select output type:", exportOptions, out int compressionChoice);
         var compression = exportOptions.ElementAt(compressionChoice);
+        var isCsvExport = compression == "csv";
 
         AnsiConsole.MarkupLine("[green]Loading[/]...");
 
@@ -62,7 +64,7 @@ public static class Program
             Directory.CreateDirectory(outputDir);
 
         Dictionary<string, int> notableJewelSocketMappings = null;
-        if (compression == "csv")
+        if (isCsvExport)
         {
             AnsiConsole.MarkupLine("[green]Calculating Notable skills affected by jewel radii[/]...");
             var calculator = new AffectedNotablesCalculator();
@@ -92,21 +94,20 @@ public static class Program
         //begin iterating over the 5 jewel types
         //reverse order since glorious vanity sucks
         string outputPath = null;
+        List<CsvExportRow> csvExport;
         for (int i = 6; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
             byte[] dataBuffer;
-            List<CsvExportRow> csvExport;
+            csvExport = null;
             //glorious vanity logic
             if (i == 1)
             {
                 AnsiConsole.MarkupLine("[green]Calculating Glorious Vanity seeds[/]...");
-                // TODO - Remove this temporary skip logic for glorious vanity
-                continue;
 
                 //calculate
-                GenerateGloriousVanity(notablesThenSmalls, out var luaSizes, out dataBuffer);
+                GenerateGloriousVanity(notablesThenSmalls, isCsvExport, notableJewelSocketMappings, out var luaSizes, out dataBuffer, out csvExport);
                 //create the lua mapping file
                 sb.Clear();
                 sb.AppendLine("nodeIDList = { }");
@@ -175,7 +176,7 @@ public static class Program
                     file.Write(compressedData, 0, compressedData.Length);
                 }
             }
-            if (compression == "csv")
+            if (isCsvExport)
             {
                 AnsiConsole.MarkupLine("[green]Generating CSV file[/]...");
                 outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv"));
@@ -202,9 +203,9 @@ public static class Program
         return DataManager.PassiveSkills.Where(x => x.IsModifiable && (!notables ^ x.IsNotable)).ToList();
     }
 
-    private static void GenerateGloriousVanity(List<PassiveSkill> nodes, out int[] luaDefinitions, out byte[] data)
+    private static void GenerateGloriousVanity(List<PassiveSkill> nodes, bool isCsvExport, Dictionary<string, int> notableJewelSocketMappings, out int[] luaDefinitions, out byte[] data, out List<CsvExportRow> csvData)
     {
-        GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+        GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         //the datafile header. cant use out params in anonymous methods
         byte[] header = new byte[maxSeed * nodes.Count];
@@ -220,10 +221,16 @@ public static class Program
         {
             throw new Exception("Cannot safely construct file: possible indices greater than byte size");
         }
-        //nested parallell tasks, in case your cpu wasnt on fire yet
+        var export = new ConcurrentBag<CsvExportRow>();
+        //nested parallel tasks, in case your cpu wasn't on fire yet
         Parallel.For(0, nodes.Count, nodeIndex =>
         {
             var node = nodes[nodeIndex];
+            if (isCsvExport && !node.IsNotable)
+            {
+                return;
+            }
+            
             Parallel.For(jewelMin / jewelIncrement, jewelMax / jewelIncrement + 1, i =>
             {
                 //which jewel seed is this
@@ -261,16 +268,32 @@ public static class Program
                         rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
                     }
                 }
+
                 //save the data
                 var dataEntry = new List<byte>(indices);
                 dataEntry.AddRange(rolls);
                 header[nodeIndex * maxSeed + jewelIndex] = (byte)dataEntry.Count;
                 data2d[nodeIndex * maxSeed + jewelIndex] = dataEntry.ToArray();
+
+                var exportRow = new CsvExportRow(
+                    jewelSeed,
+                    jewelName,
+                    jewelType,
+                    node,
+                    (uint)nodeIndex,
+                    skillInfo.AlternatePassiveSkill.Name,
+                    notableJewelSocketMappings
+                );
+                // A JewelSocketId of 0 indicates that the notable does not appear in the radius of a jewel socket
+                if (exportRow.JewelSocketId > 0)
+                {
+                    export.Add(exportRow);
+                }
             });
         });
         //write the data
         var outputData = new List<byte>(header);
-        foreach (var entry in data2d)
+        foreach (var entry in data2d.Where(d => d is not null))
         {
             outputData.AddRange(entry);
         }
@@ -280,6 +303,7 @@ public static class Program
             luaDefinitions[i] = header.Skip(i * maxSeed).Take(maxSeed).Sum(x => x);
         }
         data = outputData.ToArray();
+        csvData = export.ToList();
     }
 
     private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, Dictionary<string, int> notableJewelSocketMappings, out byte[] data, out List<CsvExportRow> csvData)
