@@ -185,7 +185,14 @@ public static class Program
                     File.Delete(outputPath);
                 }
 
-                File.WriteAllText(outputPath, CsvSerializer.SerializeToCsv(csvExport));
+                File.WriteAllText(
+                    outputPath, 
+                    CsvSerializer.SerializeToCsv(
+                        csvExport
+                            .OrderBy(s => s.JewelSeed)
+                            .ThenBy(s => s.JewelSocketId)
+                    )
+                );
             }
             //log completion
             sw.Stop();
