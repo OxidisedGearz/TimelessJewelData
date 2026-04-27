@@ -31,6 +31,7 @@ public static class Program
         //prompt
         AnsiConsole.MarkupLine("Spinning up!");
 
+        // Load input files
         GeneratorSettings.AlternatePassiveAdditionsFilePath = Path.GetFullPath(@"source-data\alternatepassiveadditions.json");
         if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
             PromptUserForFile("Path to [yellow]alternate passive ADDITIONS[/] file:", out GeneratorSettings.AlternatePassiveAdditionsFilePath);
@@ -58,6 +59,15 @@ public static class Program
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
+
+        Dictionary<string, int> notableJewelSocketmappings = null;
+        if (compression == "csv")
+        {
+            AnsiConsole.MarkupLine("[green]Calculating Notable Mappings[/]...");
+            var calculator = new AffectedNotablesCalculator();
+            notableJewelSocketmappings = calculator.GetNotableToSocketMapping();
+            AnsiConsole.MarkupLine($"{notableJewelSocketmappings.Count} Notable Mappings Loaded");
+        }
 
         var justNotables = GetModifiableNodes(true);
         var justSmallNodes = GetModifiableNodes(false);
@@ -90,6 +100,7 @@ public static class Program
             //glorious vanity logic
             if (i == 1)
             {
+                AnsiConsole.MarkupLine("[green]Calculating Glorious Vanity Seeds[/]...");
                 // TODO - Remove this temporary skip logic for glorious vanity
                 continue;
 
@@ -112,11 +123,12 @@ public static class Program
             //non-glorious vanity logic
             else
             {
-                GenerateRegular(justNotables, i, out dataBuffer, out csvExport);
+                GenerateRegular(justNotables, i, notableJewelSocketmappings, out dataBuffer, out csvExport);
             }
             //output uncompressed
             if (compression == "uncompressed" || compression == "both")
             {
+                AnsiConsole.MarkupLine("[green]Generating Uncompressed Output File[/]...");
                 outputPath = Path.Combine(outputDir, outputFile);
                 if (File.Exists(outputPath))
                 {
@@ -128,6 +140,7 @@ public static class Program
             //output compressed
             if (compression == "compressed" || compression == "both")
             {
+                AnsiConsole.MarkupLine("[green]Generating Compressed Output File[/]...");
                 byte[] compressedData = Compress(dataBuffer);
                 //need to split into multiple files because PoB is dumb
                 if (compressedData.Length > MaxBytesInFile)
@@ -163,7 +176,7 @@ public static class Program
             }
             if (compression == "csv")
             {
-                AnsiConsole.MarkupLine("Exporting CSVs");
+                AnsiConsole.MarkupLine("[green]Generating CSV File[/]...");
                 outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv"));
                 if (File.Exists(outputPath))
                 {
@@ -174,13 +187,13 @@ public static class Program
             }
             //log completion
             sw.Stop();
-            Console.WriteLine($"{outputFile} took {sw.Elapsed.TotalSeconds} seconds");
+            AnsiConsole.MarkupLine($"{outputFile} took {string.Format("{0:0.##}", sw.Elapsed.TotalSeconds)} seconds");
             if (outputPath != null)
             {
-                Console.WriteLine($"File available at: {outputPath}");
+                AnsiConsole.MarkupLine($"[blue]File available at:[/] {outputPath}");
             }
         }
-        AnsiConsole.MarkupLine("[green]Done[/]!");
+        AnsiConsole.MarkupLine("[blue]Done[/]!");
     }
 
     private static List<PassiveSkill> GetModifiableNodes(bool notables)
@@ -268,9 +281,12 @@ public static class Program
         data = outputData.ToArray();
     }
 
-    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, out byte[] data, out List<CsvExportRow> csvData)
+    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, Dictionary<string, int> notableJewelSocketmappings, out byte[] data, out List<CsvExportRow> csvData)
     {
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
+
+        AnsiConsole.MarkupLine($"[green]Calculating {jewelName} Seeds[/]...");
+
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
 
@@ -321,7 +337,20 @@ public static class Program
                 {
                     var notableIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
                     passiveSkillIndex = jewelEffectOptions[notableIndex + numAdditions];
-                    export.Add(new CsvExportRow(jewel_seed, jewelName, jewel_type, notable, notableIndex, notableJewelReplacements[notableIndex]));
+                    var exportRow = new CsvExportRow(
+                        jewel_seed,
+                        jewelName,
+                        jewel_type,
+                        notable,
+                        notableIndex,
+                        notableJewelReplacements[notableIndex],
+                        notableJewelSocketmappings
+                    );
+                    // A JewelSocketId of 0 indicates that the notable does not appear in the radius of a jewel socket
+                    if (exportRow.JewelSocketId > 0)
+                    {
+                        export.Add(exportRow);
+                    }
                 }
                 else
                 {

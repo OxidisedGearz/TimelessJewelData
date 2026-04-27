@@ -40,6 +40,12 @@ public class PassiveSkill : IComparable<PassiveSkill>
 
     [JsonPropertyName("orbit")]
     public uint? Orbit { get; init; }
+
+    [JsonPropertyName("group")]
+    public int? Group { get; init; }
+
+    [JsonPropertyName("orbitIndex")]
+    public int? OrbitIndex { get; init; }
     public bool IsCluster => Orbit == null;
     public bool IsAttribute => 
         StatStrings != null && StatStrings.Count == 1 &&
