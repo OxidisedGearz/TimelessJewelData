@@ -20,17 +20,17 @@ namespace DatafileGenerator.Source.Data.Models
             int jewelType,
             PassiveSkill notable,
             uint notableIndex,
-            AlternatePassiveSkill notableJewelReplacement,
-            Dictionary<string, int> notableJewelSocketmappings
+            string notableJewelReplacementName,
+            Dictionary<string, int> notableJewelSocketMappings
         )
         {
             JewelSeed = jewelSeed;
             JewelType = jewelType;
             JewelName = jewelName;
-            JewelSocketId = notableJewelSocketmappings.ContainsKey(notable.Name) ? notableJewelSocketmappings[notable.Name] : 0;
+            JewelSocketId = notableJewelSocketMappings.ContainsKey(notable.Name) ? notableJewelSocketMappings[notable.Name] : 0;
 
             NotableName = notable.Name;
-            NotableReplacementName = notableJewelReplacement.Name;
+            NotableReplacementName = notableJewelReplacementName;
             NotableReplacementIndex = notableIndex;
         }
     }

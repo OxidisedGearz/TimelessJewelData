@@ -12,7 +12,7 @@ public class AlternatePassiveAddition
     [JsonPropertyName("AlternateTreeVersionsKey")]
     public uint AlternateTreeVersionIndex { get; init; }
 
-    [JsonPropertyName("Name")]
+    [JsonPropertyName("Id")]
     public string Name { get; init; }
 
     [JsonPropertyName("StatsKeys")]

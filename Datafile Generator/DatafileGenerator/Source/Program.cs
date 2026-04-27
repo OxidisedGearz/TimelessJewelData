@@ -2,6 +2,7 @@
 using DatafileGenerator.Data.Models;
 using DatafileGenerator.Game;
 using DatafileGenerator.Source.Data.Models;
+using ServiceStack;
 using ServiceStack.Text;
 using Spectre.Console;
 using System;
@@ -29,7 +30,7 @@ public static class Program
     {
         Console.Title = $"{GeneratorSettings.ApplicationName} (v{GeneratorSettings.ApplicationVersion})";
         //prompt
-        AnsiConsole.MarkupLine("Spinning up!");
+        AnsiConsole.MarkupLine("[green]Spinning up[/]!");
 
         // Load input files
         GeneratorSettings.AlternatePassiveAdditionsFilePath = Path.GetFullPath(@"source-data\alternatepassiveadditions.json");
@@ -50,7 +51,7 @@ public static class Program
         }
         
         var exportOptions = new List<string>() { "compressed", "uncompressed", "csv", "both" };
-        PromptUserForChoice("Output type:", exportOptions, out int compressionChoice);
+        PromptUserForChoice("Select output type:", exportOptions, out int compressionChoice);
         var compression = exportOptions.ElementAt(compressionChoice);
 
         AnsiConsole.MarkupLine("[green]Loading[/]...");
@@ -60,13 +61,13 @@ public static class Program
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
 
-        Dictionary<string, int> notableJewelSocketmappings = null;
+        Dictionary<string, int> notableJewelSocketMappings = null;
         if (compression == "csv")
         {
-            AnsiConsole.MarkupLine("[green]Calculating Notable Mappings[/]...");
+            AnsiConsole.MarkupLine("[green]Calculating Notable skills affected by jewel radii[/]...");
             var calculator = new AffectedNotablesCalculator();
-            notableJewelSocketmappings = calculator.GetNotableToSocketMapping();
-            AnsiConsole.MarkupLine($"{notableJewelSocketmappings.Count} Notable Mappings Loaded");
+            notableJewelSocketMappings = calculator.GetNotableToSocketMapping();
+            AnsiConsole.MarkupLine($"{notableJewelSocketMappings.Count} Affected Notable skills found");
         }
 
         var justNotables = GetModifiableNodes(true);
@@ -100,7 +101,7 @@ public static class Program
             //glorious vanity logic
             if (i == 1)
             {
-                AnsiConsole.MarkupLine("[green]Calculating Glorious Vanity Seeds[/]...");
+                AnsiConsole.MarkupLine("[green]Calculating Glorious Vanity seeds[/]...");
                 // TODO - Remove this temporary skip logic for glorious vanity
                 continue;
 
@@ -123,12 +124,12 @@ public static class Program
             //non-glorious vanity logic
             else
             {
-                GenerateRegular(justNotables, i, notableJewelSocketmappings, out dataBuffer, out csvExport);
+                GenerateRegular(justNotables, i, notableJewelSocketMappings, out dataBuffer, out csvExport);
             }
             //output uncompressed
             if (compression == "uncompressed" || compression == "both")
             {
-                AnsiConsole.MarkupLine("[green]Generating Uncompressed Output File[/]...");
+                AnsiConsole.MarkupLine("[green]Generating uncompressed output file[/]...");
                 outputPath = Path.Combine(outputDir, outputFile);
                 if (File.Exists(outputPath))
                 {
@@ -140,7 +141,7 @@ public static class Program
             //output compressed
             if (compression == "compressed" || compression == "both")
             {
-                AnsiConsole.MarkupLine("[green]Generating Compressed Output File[/]...");
+                AnsiConsole.MarkupLine("[green]Generating compressed output file[/]...");
                 byte[] compressedData = Compress(dataBuffer);
                 //need to split into multiple files because PoB is dumb
                 if (compressedData.Length > MaxBytesInFile)
@@ -176,7 +177,7 @@ public static class Program
             }
             if (compression == "csv")
             {
-                AnsiConsole.MarkupLine("[green]Generating CSV File[/]...");
+                AnsiConsole.MarkupLine("[green]Generating CSV file[/]...");
                 outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv"));
                 if (File.Exists(outputPath))
                 {
@@ -281,11 +282,11 @@ public static class Program
         data = outputData.ToArray();
     }
 
-    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, Dictionary<string, int> notableJewelSocketmappings, out byte[] data, out List<CsvExportRow> csvData)
+    private static void GenerateRegular(List<PassiveSkill> nodes, int jewelType, Dictionary<string, int> notableJewelSocketMappings, out byte[] data, out List<CsvExportRow> csvData)
     {
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
 
-        AnsiConsole.MarkupLine($"[green]Calculating {jewelName} Seeds[/]...");
+        AnsiConsole.MarkupLine($"[green]Calculating {jewelName} seeds[/]...");
 
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
@@ -305,9 +306,21 @@ public static class Program
                 .Select((x, i) => new { rid = x, index = (byte)i })
                 .ToDictionary(x => x.rid, x => x.index);
 
-        var notableJewelReplacements = DataManager.AlternatePassiveSkills
+        var timelessJewelsWithAdditions = new string[] { "LethalPride", "BrutalRestraint" };
+        Dictionary<uint, string> notableJewelReplacementNames;
+
+        if (timelessJewelsWithAdditions.Contains(jewelName))
+        {
+            notableJewelReplacementNames = DataManager.AlternatePassiveAdditions
                 .Where(x => x.AlternateTreeVersionIndex == jewelType)
-                .ToDictionary(x => x.Index, x => x);
+                .ToDictionary(x => x.Index, x => x.Name);
+        }
+        else
+        {
+            notableJewelReplacementNames = DataManager.AlternatePassiveSkills
+                .Where(x => x.AlternateTreeVersionIndex == jewelType)
+                .ToDictionary(x => x.Index, x => x.Name);
+        }
 
         if (jewelEffectOptions.Count > 256)
         {
@@ -333,29 +346,38 @@ public static class Program
                 var alternateTreeManager = new AlternateTreeManager(notable, timelessJewelFromInput);
                 bool flag = alternateTreeManager.IsPassiveSkillReplaced();
                 byte passiveSkillIndex = 0;
+                uint notableIndex = 0;
+                AlternatePassiveSkill notableJewelReplacement = null;
+                string notableReplacementName = string.Empty;
                 if (flag)
                 {
-                    var notableIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
+                    notableIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
+                    notableReplacementName = notableJewelReplacementNames[notableIndex];
                     passiveSkillIndex = jewelEffectOptions[notableIndex + numAdditions];
-                    var exportRow = new CsvExportRow(
-                        jewel_seed,
-                        jewelName,
-                        jewel_type,
-                        notable,
-                        notableIndex,
-                        notableJewelReplacements[notableIndex],
-                        notableJewelSocketmappings
-                    );
-                    // A JewelSocketId of 0 indicates that the notable does not appear in the radius of a jewel socket
-                    if (exportRow.JewelSocketId > 0)
-                    {
-                        export.Add(exportRow);
-                    }
                 }
                 else
                 {
-                    passiveSkillIndex = jewelEffectOptions[alternateTreeManager.AugmentPassiveSkill().First().AlternatePassiveAddition.Index];
+                    var augment = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault();
+                    notableIndex = augment?.AlternatePassiveAddition.Index ?? 0;
+                    notableReplacementName = notableJewelReplacementNames[notableIndex];
+                    passiveSkillIndex = jewelEffectOptions[notableIndex];
                 }
+
+                var exportRow = new CsvExportRow(
+                    jewel_seed,
+                    jewelName,
+                    jewel_type,
+                    notable,
+                    notableIndex,
+                    notableReplacementName,
+                    notableJewelSocketMappings
+                );
+                // A JewelSocketId of 0 indicates that the notable does not appear in the radius of a jewel socket
+                if (exportRow.JewelSocketId > 0)
+                {
+                    export.Add(exportRow);
+                }
+
                 dataInternal[notableIndex * maxSeed + jewel_index] = passiveSkillIndex;
             });
         });
