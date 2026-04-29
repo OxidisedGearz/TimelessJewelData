@@ -16,7 +16,6 @@ namespace DatafileGenerator.Source.Data.Models
 
         [IgnoreDataMember]
         public uint NotableId { get; set; }
-        [IgnoreDataMember]
         public string NotableName { get; set; }
 
         [IgnoreDataMember]

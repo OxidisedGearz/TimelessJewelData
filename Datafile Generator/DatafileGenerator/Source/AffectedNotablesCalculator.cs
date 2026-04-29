@@ -88,8 +88,8 @@ public class AffectedNotablesCalculator
     {
         var mapping = new Dictionary<string, int>();
 
-        // Get all jewel sockets
-        var jewelSockets = _skillTree.Nodes.Values.Where(n => n.IsJewelSocket).ToList();
+        // Get all Basic and Large (aka cluster) jewel sockets
+        var jewelSockets = _skillTree.Nodes.Values.Where(n => n.IsJewelSocket && (n.Name == "Basic Jewel Socket" || n.Name == "Large Jewel Socket")).ToList();
 
         // For each notable, find the closest jewel socket within radius
         foreach (var notable in _skillTree.Nodes.Values.Where(n => n.IsNotable))

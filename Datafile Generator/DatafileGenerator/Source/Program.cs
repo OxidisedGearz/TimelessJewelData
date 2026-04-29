@@ -178,21 +178,25 @@ public static class Program
             }
             if (isCsvExport)
             {
-                AnsiConsole.MarkupLine("[green]Generating CSV file[/]...");
-                outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv"));
+                AnsiConsole.MarkupLine("[green]Generating GZipped CSV file[/]...");
+                outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "csv.gz"));
                 if (File.Exists(outputPath))
                 {
                     File.Delete(outputPath);
                 }
 
-                File.WriteAllText(
-                    outputPath, 
-                    CsvSerializer.SerializeToCsv(
-                        csvExport
-                            .OrderBy(s => s.JewelSeed)
-                            .ThenBy(s => s.JewelSocketId)
-                    )
-                );
+                using (var fileStream = File.Create(outputPath))
+                using (var gzipStream = new GZipStream(fileStream, CompressionMode.Compress))
+                using (var writer = new StreamWriter(gzipStream))
+                {
+                    writer.Write(
+                        CsvSerializer.SerializeToCsv(
+                            csvExport
+                                .OrderBy(s => s.JewelSeed)
+                                .ThenBy(s => s.JewelSocketId)
+                        )
+                    );
+                }
             }
             //log completion
             sw.Stop();
