@@ -1,4 +1,24 @@
-# Using the data files
+# Timeless Jewel Datafile Generator
+
+## Before you begin
+
+This tool requires several data files as inputs. Follow these steps to source the information:
+
+1. Clone this git repo from <https://github.com/Regisle/TimelessJewelData/tree/Generator>
+2. Open the latest branch
+3. Set up the `data.json` file by:
+   1. Downloading the `data.json` tree file from GGG's github: <https://github.com/grindinggear/skilltree-export/blob/master/data.json>
+   2. Saving the `data.json` file as `~\Datafile Generator\DatafileGenerator\source-data\data.json`
+4. Open <https://snosme.github.io/poe-dat-viewer/>
+5. The page shows you the **Latest PoE patch**. Paste the PoE1 Patch number into the **Patch #** field and click the **Import** button
+6. Set up the `alternatepassiveadditions.json` file by:
+   1. Use the search bar to find `AlternatePassiveAdditions`, open it and click on **Export data** in the top right
+   2. Save the `alternatepassiveadditions.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveadditions.json`
+7. Set up the `alternatepassiveskills.json` file by:
+   1.  Use the search bar to find `AlternatePassiveSkills`, open it and click on **Export data** in the top right
+   2.  Save the `alternatepassiveskills.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveskills.json`
+
+## Using the data files
 
 ### Parsing Brutal Restraint, Elegant Hubris, Lethal Pride, Militant Faith, and Heroic Tragedy
 
@@ -34,7 +54,7 @@ It is also possible to SEEK directly to the byte in the file that holds the desi
 
 ### Parsing Glorious Vanity
 
-Glorious Vanity, having variable stat replacments for * *all* * nodes as well as multiple stats per notable with rolls on those stats, is a much larger file (hence compressed for github), and is more complex. Its parsing method is similar to the others, but requires a fair few tweaks:
+Glorious Vanity, having variable stat replacements for * *all* * nodes as well as multiple stats per notable with rolls on those stats, is a much larger file (hence compressed for github), and is more complex. Its parsing method is similar to the others, but requires a fair few tweaks:
 
 like before:
 
@@ -95,14 +115,22 @@ is.read((char*)lut.data(), lut.size());
 
 take a random node, lets say lethal pride, Lava Lash, seed 10116 (as it ends up easier), this gives you an index of 0 + 116, the byte at that value is 52 (a "4" in ascii) which corresponds with "karui_notable_add_burning_damage", which is what it is ![](https://cdn.discordapp.com/attachments/175290321695932416/993077938847219722/unknown.png)
 
+## Generating the data files
 
-
-
-# Generating the data files
-
-Datafiles are generated using the DatafileGeneartor (a visual studio project, C#).    
-It's built on top of a timeless jewel simulator, so its not very consice, but the meat of the file format logic is in program.cs while the rest is just modelling the prng and parsing jsons.    
+Datafiles are generated using the DatafileGenerator (a visual studio project, C#).    
+It's built on top of a timeless jewel simulator, so its not very concise, but the meat of the file format logic is in program.cs while the rest is just modelling the prng and parsing jsons.
 
 It will need an alternate passive additions json, an alternate passive skills json, and the most recent skill tree json. You'll also have to tell it where to output and whether you want the compressed or uncompressed files.    
 
 Running it will output 6 datafiles, 1 lua file, and 1 csv file (note that if compressed, the Glorious Vanity "file" will actually come out to be multiple files each with size at most 5MB due to the limitations within Path of Building).
+
+## Generating CSV files
+
+If you'd like to export human-readable CSV data dumps of the Timeless Jewel notable replacements, do the following
+
+1. Follow the steps outlines in [Before you begin](#before-you-begin)
+2. Open `~\Datafile Generator\DatafileGenerator.sln` in Visual Studio
+3. (Optional) Add or remove `[IgnoreDataMember]` annotations in the `~\Datafile Generator\DatafileGenerator\Source\Data\Models\CsvExportRow.cs` file to specify which data fields you'd like to include in your CSV exports
+4. Run the program. If you are prompted for input files then you have saved the 3 json files in the wrong directory. You can still select them manually
+5. Choose **csv** as the export type
+6. The GZipped CSV files are exported to `~\Datafile Generator\output-data`

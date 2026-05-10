@@ -11,23 +11,9 @@
 		<PackageReference Include="Spectre.Console" Version="0.55.2" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Compile Update="Source\Data\Models\AlternatePassiveAddition.cs">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Compile>
-	  <Compile Update="Source\Data\Models\AlternatePassiveSkill.cs">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Compile>
-	  <Compile Update="Source\Data\Models\AlternateTreeVersion.cs">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Compile>
-	  <Compile Update="Source\Data\Models\PassiveSkill.cs">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Compile>
-	  <Compile Update="Source\Data\Models\TreeDataFile.cs">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Compile>
-	</ItemGroup>
-	<ItemGroup>
+	  <None Update="output-data\README.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="source-data\alternatepassiveadditions.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
@@ -35,6 +21,9 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="source-data\data.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\README.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

@@ -1,4 +1,6 @@
 .vs
-**/Build/*
+**/Build
 **/output-data/*
+!**/output-data/readme.md
 **/source-data/*
+!**/source-data/readme.md
