@@ -22,7 +22,6 @@ public static class Program
 
     private const int MightOfTheVaal = 76;
     private const int LegacyOfTheVaal = 77;
-
     private const int MaxBytesInFile = 5242880; //5MB
     private static int NumAdditions;
     private const string LuaMappingFileName = "NodeIndexMapping.lua";
@@ -33,7 +32,6 @@ public static class Program
         Console.Title = $"{GeneratorSettings.ApplicationName} (v{GeneratorSettings.ApplicationVersion})";
         //prompt
         AnsiConsole.MarkupLine("[green]Spinning up[/]!");
-
         // Load input files
         GeneratorSettings.AlternatePassiveAdditionsFilePath = Path.GetFullPath(@"source-data\alternatepassiveadditions.json");
         if(!File.Exists(GeneratorSettings.AlternatePassiveAdditionsFilePath)){
@@ -67,6 +65,7 @@ public static class Program
 
         if (!DataManager.Initialize())
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
+        NumAdditions = DataManager.AlternatePassiveAdditions.Count;
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
 
@@ -107,7 +106,6 @@ public static class Program
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
             byte[] dataBuffer;
-
             //glorious vanity logic
             if (i == 1)
             {
@@ -134,7 +132,7 @@ public static class Program
             {
                 GenerateRegular(justNotables, isCsvExport, i, notableJewelSocketMappings, out dataBuffer, out csvExport);
             }
-
+            //output uncompressed
             if (compression == OutputUncompressedFiles || compression == OutputBothFileFormats)
             {
                 AnsiConsole.MarkupLine("[green]Generating uncompressed output file[/]...");
@@ -148,7 +146,7 @@ public static class Program
                 file.Write(dataBuffer, 0, dataBuffer.Length);
                 }
             }
-
+            //output compressed
             if (compression == OutputCompressedFiles || compression == OutputBothFileFormats)
             {
                 AnsiConsole.MarkupLine("[green]Generating compressed output file[/]...");
@@ -202,7 +200,7 @@ public static class Program
                 AnsiConsole.MarkupLine($"[blue]File available at:[/] {outputPath}");
             }
         }
-        AnsiConsole.MarkupLine("[blue]Done[/]!");
+        AnsiConsole.MarkupLine("[green]Done[/]!");
     }
 
     private static List<PassiveSkill> GetModifiableNodes(bool notables)
@@ -276,7 +274,6 @@ public static class Program
                         rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
                     }
                 }
-
                 //save the data
                 var dataEntry = new List<byte>(indices);
                 dataEntry.AddRange(rolls);
@@ -325,7 +322,6 @@ public static class Program
 
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
-
         //re-index our additions and replacements to consider only this jewel type
         uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
         var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index)
@@ -383,8 +379,7 @@ public static class Program
                 }
                 else
                 {
-                    var augment = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault();
-                    notableIndex = augment?.AlternatePassiveAddition.Index ?? 0;
+                    notableIndex = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault()?.AlternatePassiveAddition.Index ?? 0;
                     notableReplacementName = notableJewelReplacementNames[notableIndex];
                     passiveSkillIndex = jewelEffectOptions[notableIndex];
                 }

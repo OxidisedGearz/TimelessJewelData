@@ -138,5 +138,5 @@ If you'd like to export human-readable CSV data dumps of the Timeless Jewel nota
 2. Open `~\Datafile Generator\DatafileGenerator.sln` in Visual Studio
 3. (Optional) Add or remove `[IgnoreDataMember]` annotations in the `~\Datafile Generator\DatafileGenerator\Source\Data\Models\CsvExportRow.cs` file to specify which data fields you'd like to include in your CSV exports
 4. Run the program. If you are prompted for input files then you have saved the 3 json files in the wrong directory. You can still select them manually
-5. Choose **csv** as the export type
-6. The GZipped CSV files are exported to `~\Datafile Generator\output-data`
+5. Choose **csv** or **csv (compressed)** as the export type
+6. The (GZipped) CSV files are exported to `~\Datafile Generator\output-data`
