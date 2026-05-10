@@ -143,7 +143,7 @@ public static class Program
                 }
                 using (Stream file = File.OpenWrite(outputPath))
                 {
-                file.Write(dataBuffer, 0, dataBuffer.Length);
+                    file.Write(dataBuffer, 0, dataBuffer.Length);
                 }
             }
             //output compressed
@@ -181,7 +181,7 @@ public static class Program
                     }
                     using (Stream file = File.OpenWrite(outputPath))
                     {
-                    file.Write(compressedData, 0, compressedData.Length);
+                        file.Write(compressedData, 0, compressedData.Length);
                     }
                 }
             }
@@ -368,20 +368,19 @@ public static class Program
                 var alternateTreeManager = new AlternateTreeManager(notable, timelessJewelFromInput);
                 bool flag = alternateTreeManager.IsPassiveSkillReplaced();
                 byte passiveSkillIndex = 0;
-                uint notableIndex = 0;
-                AlternatePassiveSkill notableJewelReplacement = null;
+                uint notableAlternatePassiveIndex = 0;
                 string notableReplacementName = string.Empty;
                 if (flag)
                 {
-                    notableIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
-                    notableReplacementName = notableJewelReplacementNames[notableIndex];
-                    passiveSkillIndex = jewelEffectOptions[notableIndex + numAdditions];
+                    notableAlternatePassiveIndex = alternateTreeManager.ReplacePassiveSkill().AlternatePassiveSkill.Index;
+                    notableReplacementName = notableJewelReplacementNames[notableAlternatePassiveIndex];
+                    passiveSkillIndex = jewelEffectOptions[notableAlternatePassiveIndex + numAdditions];
                 }
                 else
                 {
-                    notableIndex = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault()?.AlternatePassiveAddition.Index ?? 0;
-                    notableReplacementName = notableJewelReplacementNames[notableIndex];
-                    passiveSkillIndex = jewelEffectOptions[notableIndex];
+                    notableAlternatePassiveIndex = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault()?.AlternatePassiveAddition.Index ?? 0;
+                    notableReplacementName = notableJewelReplacementNames[notableAlternatePassiveIndex];
+                    passiveSkillIndex = jewelEffectOptions[notableAlternatePassiveIndex];
                 }
 
                 if(isCsvExport){
@@ -390,7 +389,7 @@ public static class Program
                         jewelName,
                         jewel_type,
                         notable,
-                        notableIndex,
+                        notableAlternatePassiveIndex,
                         notableReplacementName,
                         notableJewelSocketMappings
                     );
@@ -460,13 +459,15 @@ public static class Program
 
     private static byte[] Compress(byte[] data)
     {
-        var internalMemoryStream = new MemoryStream();
-        //deflate it to the smallest size. we have time.
-        using (var deflateStream = new ZLibStream(internalMemoryStream, CompressionLevel.SmallestSize))
+        using (var internalMemoryStream = new MemoryStream())
         {
-            deflateStream.Write(data, 0, data.Length);
-        }
-        return internalMemoryStream.ToArray();
+            //deflate it to the smallest size. we have time.
+            using (var deflateStream = new ZLibStream(internalMemoryStream, CompressionLevel.SmallestSize))
+            {
+                deflateStream.Write(data, 0, data.Length);
+            }
+            return internalMemoryStream.ToArray();
+        }        
     }
 
     private static TimelessJewel GetTimelessJewel(uint seed, uint jewelType)
