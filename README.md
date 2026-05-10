@@ -12,11 +12,17 @@ This tool requires several data files as inputs. Follow these steps to source th
 4. Open <https://snosme.github.io/poe-dat-viewer/>
 5. The page shows you the **Latest PoE patch**. Paste the PoE1 Patch number into the **Patch #** field and click the **Import** button
 6. Set up the `alternatepassiveadditions.json` file by:
-   1. Use the search bar to find `AlternatePassiveAdditions`, open it and click on **Export data** in the top right
-   2. Save the `alternatepassiveadditions.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveadditions.json`
+   1. Select the `data` folder from the left-hand navigation pane to open it
+   2. Use the search box in the top-left of the screen to search for `AlternatePassiveAdditions`
+   3. Select the `alternatepassiveadditions.datc64` file
+   4. Click on **Export data** in the top-right of the screen
+   5. Save the `alternatepassiveadditions.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveadditions.json`
 7. Set up the `alternatepassiveskills.json` file by:
-   1.  Use the search bar to find `AlternatePassiveSkills`, open it and click on **Export data** in the top right
-   2.  Save the `alternatepassiveskills.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveskills.json`
+   1.  Clear the previous search
+   2.  Use the search bar to find `AlternatePassiveSkills`
+   3.  Select the `alternatepassiveskills.datc64` file
+   4.  Click on **Export data** in the top-right of the screen
+   5.  Save the `alternatepassiveskills.json` file as `~\Datafile Generator\DatafileGenerator\source-data\alternatepassiveskills.json`
 
 ## Using the data files
 

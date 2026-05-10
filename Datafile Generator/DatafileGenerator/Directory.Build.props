@@ -5,6 +5,5 @@
 		<BaseOutputPath>Build\Output</BaseOutputPath>
 		<IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
 		<OutputPath>$(BaseOutputPath)\$(Configuration)</OutputPath>
-		<DebugType>portable</DebugType>
 	</PropertyGroup>
 </Project>
