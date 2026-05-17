@@ -11,6 +11,9 @@ public class AlternatePassiveSkill
     [JsonPropertyName("AlternateTreeVersionsKey")]
     public uint AlternateTreeVersionIndex { get; init; }
 
+    [JsonPropertyName("Name")]
+    public string Name { get; init; }
+
     [JsonPropertyName("StatsKeys")]
     public IReadOnlyCollection<uint> StatIndices { get; init; }
 

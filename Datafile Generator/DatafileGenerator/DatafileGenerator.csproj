@@ -6,7 +6,26 @@
 		<Configurations>Debug;Release;aaaaaaaaa</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+		<PackageReference Include="ServiceStack" Version="10.0.6" />
+		<PackageReference Include="ServiceStack.Text" Version="10.0.6" />
+		<PackageReference Include="Spectre.Console" Version="0.55.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="output-data\README.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\alternatepassiveadditions.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\alternatepassiveskills.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\data.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="source-data\README.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 	<Target Name="CopyContentFilesToOutputDirectory" AfterTargets="Build;CopyAllFilesToSingleFolderForPackage">
 		<ItemGroup>

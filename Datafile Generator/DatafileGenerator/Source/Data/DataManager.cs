@@ -18,12 +18,15 @@ public static class DataManager
 
     public static IReadOnlyCollection<PassiveSkill> PassiveSkills { get; private set; }
 
+    public static TreeDataFile FullTreeData { get; private set; }
+
     public static bool Initialize()
     {
         AlternatePassiveAdditions = LoadFromFile<AlternatePassiveAddition>(GeneratorSettings.AlternatePassiveAdditionsFilePath);
         AlternatePassiveSkills = LoadFromFile<AlternatePassiveSkill>(GeneratorSettings.AlternatePassiveSkillsFilePath);
         AlternateTreeVersions = GetAlternateTrees();
-        var treeData = LoadSingleFromFile<TreeDataFile>(GeneratorSettings.PassiveSkillsFilePath).PassiveSkills;
+        FullTreeData = LoadSingleFromFile<TreeDataFile>(GeneratorSettings.PassiveSkillsFilePath);
+        var treeData = FullTreeData.PassiveSkills;
         treeData.Remove("root");
         PassiveSkills = treeData.Values.ToList();
 
