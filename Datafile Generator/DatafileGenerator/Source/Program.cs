@@ -97,11 +97,11 @@ public static class Program
         }
         File.WriteAllText(Path.Combine(outputDir, CsvFileName), sb.ToString());
         sb.Clear();
-        //begin iterating over the 5 jewel types
+        //begin iterating over the different jewel types
         //reverse order since glorious vanity sucks
         string outputPath = null;
         List<CsvExportRow> csvExport;
-        for (int i = 6; i > 0; i--)
+        for (int i = 7; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
@@ -446,6 +446,12 @@ public static class Program
                 jewelMax = 8000;
                 jewelIncrement = 1;
                 jewelName = "HeroicTragedy";
+                break;
+            case 7:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "UndyingHate";
                 break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
