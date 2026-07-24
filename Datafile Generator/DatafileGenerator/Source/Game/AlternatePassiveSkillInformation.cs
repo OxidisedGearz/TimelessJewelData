@@ -8,11 +8,11 @@ public class AlternatePassiveSkillInformation
 {
     public AlternatePassiveSkill AlternatePassiveSkill { get; private set; }
 
-    public IReadOnlyList<uint> StatRolls { get; private set; }
+    public IReadOnlyList<int> StatRolls { get; private set; }
 
     public IReadOnlyList<AlternatePassiveAdditionInformation> AlternatePassiveAdditionInformations { get; private set; }
 
-    public AlternatePassiveSkillInformation(AlternatePassiveSkill alternatePassiveSkill, IReadOnlyList<uint> statRolls, IReadOnlyList<AlternatePassiveAdditionInformation> alternatePassiveAdditionInformations)
+    public AlternatePassiveSkillInformation(AlternatePassiveSkill alternatePassiveSkill, IReadOnlyList<int> statRolls, IReadOnlyList<AlternatePassiveAdditionInformation> alternatePassiveAdditionInformations)
     {
         ArgumentNullException.ThrowIfNull(alternatePassiveSkill, nameof(alternatePassiveSkill));
         ArgumentNullException.ThrowIfNull(statRolls, nameof(statRolls));

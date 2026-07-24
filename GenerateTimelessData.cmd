@@ -34,15 +34,7 @@ if not exist "%TREE_JSON%" goto missing_tree
 echo Running timeless jewel data generation...
 echo.
 
-set "GEN_DLL_RELEASE=Datafile Generator\DatafileGenerator\Build\Output\Release\DataFileGenerator.dll"
-set "GEN_DLL_LEGACY=Datafile Generator\DatafileGenerator\Build\Output\DataFileGenerator.dll"
-if exist "%GEN_DLL_RELEASE%" (
-    dotnet "%GEN_DLL_RELEASE%" "%ADDITIONS_JSON%" "%SKILLS_JSON%" "%TREE_JSON%" "%OUTPUT_DIR%" "%OUTPUT_TYPE%"
-) else if exist "%GEN_DLL_LEGACY%" (
-    dotnet "%GEN_DLL_LEGACY%" "%ADDITIONS_JSON%" "%SKILLS_JSON%" "%TREE_JSON%" "%OUTPUT_DIR%" "%OUTPUT_TYPE%"
-) else (
-    dotnet run --project "Datafile Generator\DatafileGenerator\DataFileGenerator.csproj" -c Release -- "%ADDITIONS_JSON%" "%SKILLS_JSON%" "%TREE_JSON%" "%OUTPUT_DIR%" "%OUTPUT_TYPE%"
-)
+dotnet run --project "Datafile Generator\DatafileGenerator\DataFileGenerator.csproj" -c Release -- "%ADDITIONS_JSON%" "%SKILLS_JSON%" "%TREE_JSON%" "%OUTPUT_DIR%" "%OUTPUT_TYPE%"
 
 set "EXITCODE=%ERRORLEVEL%"
 echo.

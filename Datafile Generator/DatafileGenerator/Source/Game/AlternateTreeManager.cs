@@ -123,7 +123,7 @@ public class AlternateTreeManager
         if (PassiveSkill.IsKeyStone)
         {
             AlternatePassiveSkill alternatePassiveSkillKeyStone = DataManager.GetAlternatePassiveSkillKeyStone(TimelessJewel);
-            uint[] alternatePassiveSkillKeyStoneStatRolls = new uint[]
+            int[] alternatePassiveSkillKeyStoneStatRolls = new int[]
             {
                 alternatePassiveSkillKeyStone.StatAMinimumValue
             };
@@ -138,7 +138,7 @@ public class AlternateTreeManager
         AlternatePassiveSkill rolledAlternatePassiveSkill = RollAlternatePassiveSkill(randomNumberGenerator);
 
         int rolledAlternatePassiveSkillStatCount = Math.Min(rolledAlternatePassiveSkill.StatIndices.Count, 4);
-        uint[] alternatePassiveSkillStatRolls = new uint[rolledAlternatePassiveSkillStatCount];
+        int[] alternatePassiveSkillStatRolls = new int[rolledAlternatePassiveSkillStatCount];
         if (rolledAlternatePassiveSkillStatCount >= 1)
             alternatePassiveSkillStatRolls[0] = RollStat(randomNumberGenerator, rolledAlternatePassiveSkill.StatAMinimumValue, rolledAlternatePassiveSkill.StatAMaximumValue);
         if (rolledAlternatePassiveSkillStatCount >= 2)
@@ -169,7 +169,7 @@ public class AlternateTreeManager
                 rolledAlternatePassiveAddition = RollAlternatePassiveAddition(randomNumberGenerator);
 
             int rolledAlternatePassiveAdditionStatCount = Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2);
-            uint[] alternatePassiveAdditionStatRolls = new uint[rolledAlternatePassiveAdditionStatCount];
+            int[] alternatePassiveAdditionStatRolls = new int[rolledAlternatePassiveAdditionStatCount];
             if (rolledAlternatePassiveAdditionStatCount >= 1)
                 alternatePassiveAdditionStatRolls[0] = RollStat(randomNumberGenerator, rolledAlternatePassiveAddition.StatAMinimumValue, rolledAlternatePassiveAddition.StatAMaximumValue);
             if (rolledAlternatePassiveAdditionStatCount >= 2)
@@ -205,7 +205,7 @@ public class AlternateTreeManager
                 rolledAlternatePassiveAddition = RollAlternatePassiveAddition(randomNumberGenerator);
 
             int rolledAlternatePassiveAdditionStatCount = Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2);
-            uint[] alternatePassiveAdditionStatRolls = new uint[rolledAlternatePassiveAdditionStatCount];
+            int[] alternatePassiveAdditionStatRolls = new int[rolledAlternatePassiveAdditionStatCount];
             if (rolledAlternatePassiveAdditionStatCount >= 1)
                 alternatePassiveAdditionStatRolls[0] = RollStat(randomNumberGenerator, rolledAlternatePassiveAddition.StatAMinimumValue, rolledAlternatePassiveAddition.StatAMaximumValue);
             if (rolledAlternatePassiveAdditionStatCount >= 2)
@@ -249,10 +249,10 @@ public class AlternateTreeManager
         return rolledAlternatePassiveSkill;
     }
 
-    private static uint RollStat(RandomNumberGenerator randomNumberGenerator, uint minimumRoll, uint maximumRoll)
+    private static int RollStat(RandomNumberGenerator randomNumberGenerator, int minimumRoll, int maximumRoll)
     {
         if (maximumRoll <= minimumRoll)
             return minimumRoll;
-        return randomNumberGenerator.Generate(minimumRoll, maximumRoll);
+        return minimumRoll + (int)randomNumberGenerator.Generate((uint)(maximumRoll - minimumRoll + 1));
     }
 }
