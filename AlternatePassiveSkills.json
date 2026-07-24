@@ -8,7 +8,7 @@
       4
     ],
     "StatsKeys": [
-      9565
+      9585
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -41,7 +41,7 @@
       4
     ],
     "StatsKeys": [
-      9521
+      9541
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -74,7 +74,7 @@
       4
     ],
     "StatsKeys": [
-      12196
+      12221
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -107,7 +107,7 @@
       4
     ],
     "StatsKeys": [
-      9563
+      9583
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -345,7 +345,7 @@
       2
     ],
     "StatsKeys": [
-      2652
+      2654
     ],
     "Stat1Min": 7,
     "Stat1Max": 12,
@@ -481,7 +481,7 @@
       2
     ],
     "StatsKeys": [
-      2018
+      2020
     ],
     "Stat1Min": 7,
     "Stat1Max": 12,
@@ -1127,7 +1127,7 @@
       2
     ],
     "StatsKeys": [
-      2134
+      2136
     ],
     "Stat1Min": 2,
     "Stat1Max": 2,
@@ -1195,7 +1195,7 @@
       2
     ],
     "StatsKeys": [
-      14918
+      14960
     ],
     "Stat1Min": 4,
     "Stat1Max": 4,
@@ -1229,7 +1229,7 @@
       2
     ],
     "StatsKeys": [
-      3895
+      3899
     ],
     "Stat1Min": 2,
     "Stat1Max": 4,
@@ -1467,7 +1467,7 @@
     ],
     "StatsKeys": [
       42,
-      3158
+      3161
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1569,7 +1569,7 @@
     ],
     "StatsKeys": [
       49,
-      3159
+      3162
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1671,7 +1671,7 @@
     ],
     "StatsKeys": [
       56,
-      3160
+      3163
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1739,7 +1739,7 @@
     ],
     "StatsKeys": [
       26,
-      5914
+      5925
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1773,7 +1773,7 @@
     ],
     "StatsKeys": [
       26,
-      3157
+      3160
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1807,7 +1807,7 @@
     ],
     "StatsKeys": [
       26,
-      9204
+      9224
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1841,7 +1841,7 @@
     ],
     "StatsKeys": [
       63,
-      9890
+      9910
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1875,7 +1875,7 @@
     ],
     "StatsKeys": [
       63,
-      2176
+      2178
     ],
     "Stat1Min": 25,
     "Stat1Max": 35,
@@ -1976,7 +1976,7 @@
       3
     ],
     "StatsKeys": [
-      2018,
+      2020,
       217
     ],
     "Stat1Min": 25,
@@ -2045,7 +2045,7 @@
     ],
     "StatsKeys": [
       125,
-      2742
+      2745
     ],
     "Stat1Min": 6,
     "Stat1Max": 10,
@@ -2215,7 +2215,7 @@
     ],
     "StatsKeys": [
       135,
-      8965
+      8985
     ],
     "Stat1Min": 8,
     "Stat1Max": 12,
@@ -2282,7 +2282,7 @@
       3
     ],
     "StatsKeys": [
-      2134,
+      2136,
       23
     ],
     "Stat1Min": 8,
@@ -2317,7 +2317,7 @@
     ],
     "StatsKeys": [
       622,
-      6188
+      6199
     ],
     "Stat1Min": 8,
     "Stat1Max": 10,
@@ -2350,7 +2350,7 @@
       3
     ],
     "StatsKeys": [
-      14918,
+      14960,
       142
     ],
     "Stat1Min": 6,
@@ -2384,7 +2384,7 @@
       3
     ],
     "StatsKeys": [
-      3895,
+      3899,
       846
     ],
     "Stat1Min": 7,
@@ -2419,7 +2419,7 @@
     ],
     "StatsKeys": [
       1393,
-      9021
+      9041
     ],
     "Stat1Min": 4,
     "Stat1Max": 6,
@@ -2650,7 +2650,7 @@
       4
     ],
     "StatsKeys": [
-      9812
+      9832
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2683,7 +2683,7 @@
       4
     ],
     "StatsKeys": [
-      9566
+      9586
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2716,7 +2716,7 @@
       4
     ],
     "StatsKeys": [
-      9694
+      9714
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2749,7 +2749,7 @@
       4
     ],
     "StatsKeys": [
-      11991
+      12016
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2782,7 +2782,7 @@
       4
     ],
     "StatsKeys": [
-      9747
+      9767
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2815,7 +2815,7 @@
       4
     ],
     "StatsKeys": [
-      11966
+      11991
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2848,7 +2848,7 @@
       4
     ],
     "StatsKeys": [
-      9534
+      9554
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2881,7 +2881,7 @@
       4
     ],
     "StatsKeys": [
-      9732
+      9752
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2914,7 +2914,7 @@
       4
     ],
     "StatsKeys": [
-      9564
+      9584
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2947,7 +2947,7 @@
       4
     ],
     "StatsKeys": [
-      12036
+      12061
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -2980,7 +2980,7 @@
       4
     ],
     "StatsKeys": [
-      9511
+      9531
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3013,7 +3013,7 @@
       4
     ],
     "StatsKeys": [
-      9526
+      9546
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3046,7 +3046,7 @@
       1
     ],
     "StatsKeys": [
-      9739
+      9759
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -3079,7 +3079,7 @@
       3
     ],
     "StatsKeys": [
-      9829
+      9849
     ],
     "Stat1Min": 15,
     "Stat1Max": 15,
@@ -3112,7 +3112,7 @@
       3
     ],
     "StatsKeys": [
-      9830
+      9850
     ],
     "Stat1Min": 15,
     "Stat1Max": 15,
@@ -3145,7 +3145,7 @@
       3
     ],
     "StatsKeys": [
-      9831
+      9851
     ],
     "Stat1Min": 15,
     "Stat1Max": 15,
@@ -3178,7 +3178,7 @@
       3
     ],
     "StatsKeys": [
-      9832
+      9852
     ],
     "Stat1Min": 5,
     "Stat1Max": 5,
@@ -3211,7 +3211,7 @@
       3
     ],
     "StatsKeys": [
-      9833
+      9853
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3244,7 +3244,7 @@
       3
     ],
     "StatsKeys": [
-      9834
+      9854
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3277,7 +3277,7 @@
       3
     ],
     "StatsKeys": [
-      9835
+      9855
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3310,7 +3310,7 @@
       3
     ],
     "StatsKeys": [
-      9836
+      9856
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3343,7 +3343,7 @@
       3
     ],
     "StatsKeys": [
-      9837
+      9857
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3376,7 +3376,7 @@
       3
     ],
     "StatsKeys": [
-      9838
+      9858
     ],
     "Stat1Min": 5,
     "Stat1Max": 5,
@@ -3409,7 +3409,7 @@
       3
     ],
     "StatsKeys": [
-      9839
+      9859
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3442,7 +3442,7 @@
       3
     ],
     "StatsKeys": [
-      9840
+      9860
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -3475,7 +3475,7 @@
       3
     ],
     "StatsKeys": [
-      9841
+      9861
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -3508,7 +3508,7 @@
       3
     ],
     "StatsKeys": [
-      9842
+      9862
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -3541,7 +3541,7 @@
       4
     ],
     "StatsKeys": [
-      9703
+      9723
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3574,7 +3574,7 @@
       4
     ],
     "StatsKeys": [
-      9515
+      9535
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3607,7 +3607,7 @@
       4
     ],
     "StatsKeys": [
-      9858
+      9878
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3640,7 +3640,7 @@
       4
     ],
     "StatsKeys": [
-      11967
+      11992
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3771,7 +3771,7 @@
       3
     ],
     "StatsKeys": [
-      7614
+      7628
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -3804,7 +3804,7 @@
       3
     ],
     "StatsKeys": [
-      8343
+      8360
     ],
     "Stat1Min": 8,
     "Stat1Max": 8,
@@ -3837,7 +3837,7 @@
       3
     ],
     "StatsKeys": [
-      3445
+      3448
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -3936,7 +3936,7 @@
       3
     ],
     "StatsKeys": [
-      1691
+      1692
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -4002,7 +4002,7 @@
       3
     ],
     "StatsKeys": [
-      8345
+      8362
     ],
     "Stat1Min": 4,
     "Stat1Max": 4,
@@ -4035,7 +4035,7 @@
       3
     ],
     "StatsKeys": [
-      6240
+      6251
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -4068,7 +4068,7 @@
       3
     ],
     "StatsKeys": [
-      3618
+      3622
     ],
     "Stat1Min": 30,
     "Stat1Max": 30,
@@ -4134,7 +4134,7 @@
       3
     ],
     "StatsKeys": [
-      3619
+      3623
     ],
     "Stat1Min": 30,
     "Stat1Max": 30,
@@ -4233,7 +4233,7 @@
       3
     ],
     "StatsKeys": [
-      2134
+      2136
     ],
     "Stat1Min": 12,
     "Stat1Max": 12,
@@ -4299,7 +4299,7 @@
       3
     ],
     "StatsKeys": [
-      14918
+      14960
     ],
     "Stat1Min": 12,
     "Stat1Max": 12,
@@ -4332,7 +4332,7 @@
       3
     ],
     "StatsKeys": [
-      3895
+      3899
     ],
     "Stat1Min": 12,
     "Stat1Max": 12,
@@ -4497,7 +4497,7 @@
       3
     ],
     "StatsKeys": [
-      6149
+      6160
     ],
     "Stat1Min": 80,
     "Stat1Max": 80,
@@ -4530,7 +4530,7 @@
       3
     ],
     "StatsKeys": [
-      6150
+      6161
     ],
     "Stat1Min": 80,
     "Stat1Max": 80,
@@ -4563,7 +4563,7 @@
       3
     ],
     "StatsKeys": [
-      6151
+      6162
     ],
     "Stat1Min": 80,
     "Stat1Max": 80,
@@ -4662,8 +4662,8 @@
       3
     ],
     "StatsKeys": [
-      6143,
-      9204
+      6154,
+      9224
     ],
     "Stat1Min": 50,
     "Stat1Max": 50,
@@ -4696,7 +4696,7 @@
       3
     ],
     "StatsKeys": [
-      5023
+      5033
     ],
     "Stat1Min": 80,
     "Stat1Max": 80,
@@ -4795,7 +4795,7 @@
       3
     ],
     "StatsKeys": [
-      14882
+      14924
     ],
     "Stat1Min": 12,
     "Stat1Max": 12,
@@ -5191,7 +5191,7 @@
       3
     ],
     "StatsKeys": [
-      22490,
+      22553,
       741
     ],
     "Stat1Min": 20,
@@ -5225,7 +5225,7 @@
       3
     ],
     "StatsKeys": [
-      22491,
+      22554,
       462
     ],
     "Stat1Min": 15,
@@ -5259,7 +5259,7 @@
       3
     ],
     "StatsKeys": [
-      22492,
+      22555,
       420
     ],
     "Stat1Min": 1,
@@ -5293,7 +5293,7 @@
       3
     ],
     "StatsKeys": [
-      22493,
+      22556,
       429
     ],
     "Stat1Min": 1,
@@ -5327,7 +5327,7 @@
       3
     ],
     "StatsKeys": [
-      22494,
+      22557,
       423
     ],
     "Stat1Min": 1,
@@ -5361,8 +5361,8 @@
       3
     ],
     "StatsKeys": [
-      22495,
-      14506
+      22558,
+      14548
     ],
     "Stat1Min": 30,
     "Stat1Max": 30,
@@ -5395,8 +5395,8 @@
       3
     ],
     "StatsKeys": [
-      22496,
-      14506
+      22559,
+      14548
     ],
     "Stat1Min": 30,
     "Stat1Max": 30,
@@ -5429,7 +5429,7 @@
       3
     ],
     "StatsKeys": [
-      22498
+      22561
     ],
     "Stat1Min": 2,
     "Stat1Max": 2,
@@ -5462,7 +5462,7 @@
       3
     ],
     "StatsKeys": [
-      22499
+      22562
     ],
     "Stat1Min": 4,
     "Stat1Max": 4,
@@ -5495,7 +5495,7 @@
       3
     ],
     "StatsKeys": [
-      22500
+      22563
     ],
     "Stat1Min": 8,
     "Stat1Max": 8,
@@ -5528,8 +5528,8 @@
       3
     ],
     "StatsKeys": [
-      22501,
-      14506
+      22564,
+      14548
     ],
     "Stat1Min": 30,
     "Stat1Max": 30,
@@ -5562,7 +5562,7 @@
       3
     ],
     "StatsKeys": [
-      22502,
+      22565,
       488
     ],
     "Stat1Min": 8,
@@ -5596,7 +5596,7 @@
       3
     ],
     "StatsKeys": [
-      22503,
+      22566,
       846
     ],
     "Stat1Min": 12,
@@ -5630,8 +5630,8 @@
       3
     ],
     "StatsKeys": [
-      22504,
-      2134
+      22567,
+      2136
     ],
     "Stat1Min": 10,
     "Stat1Max": 10,
@@ -5664,7 +5664,7 @@
       3
     ],
     "StatsKeys": [
-      22504,
+      22567,
       1090
     ],
     "Stat1Min": 10,
@@ -5698,7 +5698,7 @@
       3
     ],
     "StatsKeys": [
-      14501
+      14543
     ],
     "Stat1Min": 25,
     "Stat1Max": 25,
@@ -5731,7 +5731,7 @@
       3
     ],
     "StatsKeys": [
-      14501,
+      14543,
       152
     ],
     "Stat1Min": 12,
@@ -5765,7 +5765,7 @@
       3
     ],
     "StatsKeys": [
-      14501,
+      14543,
       135
     ],
     "Stat1Min": 12,
@@ -5799,7 +5799,7 @@
       3
     ],
     "StatsKeys": [
-      14501,
+      14543,
       120
     ],
     "Stat1Min": 12,
@@ -5833,7 +5833,7 @@
       3
     ],
     "StatsKeys": [
-      14501,
+      14543,
       117
     ],
     "Stat1Min": 12,
@@ -5867,7 +5867,7 @@
       3
     ],
     "StatsKeys": [
-      14506,
+      14548,
       140
     ],
     "Stat1Min": 20,
@@ -5901,8 +5901,8 @@
       3
     ],
     "StatsKeys": [
-      14501,
-      21874
+      14543,
+      21931
     ],
     "Stat1Min": 12,
     "Stat1Max": 12,
@@ -5935,13 +5935,13 @@
       3
     ],
     "StatsKeys": [
-      22507,
-      20929
+      22570,
+      20980
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
-    "Stat2Min": 25,
-    "Stat2Max": 25,
+    "Stat2Min": -25,
+    "Stat2Max": -25,
     "Unknown10": 0,
     "Unknown11": 0,
     "Unknown12": 0,
@@ -5969,7 +5969,7 @@
       3
     ],
     "StatsKeys": [
-      22505,
+      22568,
       741
     ],
     "Stat1Min": 2,
@@ -6003,7 +6003,7 @@
       4
     ],
     "StatsKeys": [
-      22514
+      22577
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -6036,7 +6036,7 @@
       4
     ],
     "StatsKeys": [
-      22515
+      22578
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -6069,7 +6069,7 @@
       4
     ],
     "StatsKeys": [
-      22516
+      22579
     ],
     "Stat1Min": 1,
     "Stat1Max": 1,
@@ -6089,6 +6089,6766 @@
     "RandomMax": 0,
     "FlavourText": "The fall is inevitable, but you stand\r\nagainst the future all the same.",
     "DDSIcon": "Art/2DArt/SkillIcons/passives/KalguuranStrKeystone.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 182,
+    "Id": "abyss_murderous_keystone",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Overwhelming Hate",
+    "PassiveType": [
+      4
+    ],
+    "StatsKeys": [
+      23096
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "Let your rage consume you, until it is all that's left.",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairMurderous1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 183,
+    "Id": "abyss_searching_keystone",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Weighted Exchange",
+    "PassiveType": [
+      4
+    ],
+    "StatsKeys": [
+      23097
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "Let the weak break their swords against you. The real challenge awaits.",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairSearching1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 184,
+    "Id": "abyss_hypnotic_keystone",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Reconstructed Essence",
+    "PassiveType": [
+      4
+    ],
+    "StatsKeys": [
+      23095
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "Far from your home, rebuild yourself with the means at your disposal.",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairHypnotic1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 185,
+    "Id": "abyss_ghastly_keystone",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "The Loyal Few",
+    "PassiveType": [
+      4
+    ],
+    "StatsKeys": [
+      23094
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "Piece by piece, your army grows, marching in harmony to annihilation.",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairGhastly1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 186,
+    "Id": "abyss_special_ascendancy_notable_1",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Sanguine Bargain",
+    "PassiveType": [
+      5
+    ],
+    "StatsKeys": [
+      23243
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairMurderous2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 187,
+    "Id": "abyss_special_ascendancy_notable_2",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Ephemeral Bolts",
+    "PassiveType": [
+      5
+    ],
+    "StatsKeys": [
+      23244
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairSearching2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 188,
+    "Id": "abyss_special_ascendancy_notable_3",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "From Below",
+    "PassiveType": [
+      5
+    ],
+    "StatsKeys": [
+      23242
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairHypnotic2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 189,
+    "Id": "abyss_special_ascendancy_notable_4",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Spiteful Allies",
+    "PassiveType": [
+      5
+    ],
+    "StatsKeys": [
+      23241
+    ],
+    "Stat1Min": 1,
+    "Stat1Max": 1,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/GlintingDespairGhastly2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 190,
+    "Id": "abyss_murderous_small_attribute1",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Life",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      124
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 191,
+    "Id": "abyss_murderous_small_attribute2",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Mana ",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      128
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 11,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 192,
+    "Id": "abyss_murderous_small_attribute3",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Energy Shield Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6874
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 193,
+    "Id": "abyss_murderous_small_attribute4",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Life Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      126
+    ],
+    "Stat1Min": 270,
+    "Stat1Max": 360,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 194,
+    "Id": "abyss_murderous_small_attribute5",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Mana Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      132
+    ],
+    "Stat1Min": 33,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 350,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 195,
+    "Id": "abyss_murderous_small_attribute6",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Armour",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      116
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 196,
+    "Id": "abyss_murderous_small_attribute7",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Evasion Rating",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      119
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 197,
+    "Id": "abyss_murderous_small_attribute8",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Energy Shield",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      134
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 198,
+    "Id": "abyss_murderous_small_attribute9",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Impale Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      8589
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 4,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 199,
+    "Id": "abyss_murderous_small_attribute10",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Mana Recoup",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1077
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 200,
+    "Id": "abyss_murderous_small_attribute11",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Cold Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12602
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 201,
+    "Id": "abyss_murderous_small_attribute12",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Lightning Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12603
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 202,
+    "Id": "abyss_murderous_small_attribute13",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Strength",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      576
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 203,
+    "Id": "abyss_murderous_small_attribute14",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      582
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 204,
+    "Id": "abyss_murderous_small_attribute15",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      579
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 205,
+    "Id": "abyss_murderous_small_attribute16",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Strength and Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1391
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 206,
+    "Id": "abyss_murderous_small_attribute17",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Strength and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1390
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 207,
+    "Id": "abyss_murderous_small_attribute18",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Dexterity and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1392
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 208,
+    "Id": "abyss_murderous_small_attribute19",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Attributes",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      607
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 209,
+    "Id": "abyss_murderous_small_attribute20",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Fire Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      146
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 210,
+    "Id": "abyss_murderous_small_attribute21",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      148
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 211,
+    "Id": "abyss_murderous_small_attribute22",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      150
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 212,
+    "Id": "abyss_murderous_small_attribute23",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Fire and Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1901
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 213,
+    "Id": "abyss_murderous_small_attribute24",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Fire and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1902
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 214,
+    "Id": "abyss_murderous_small_attribute25",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Cold and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1903
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 215,
+    "Id": "abyss_murderous_small_attribute26",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Elemental Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      142
+    ],
+    "Stat1Min": 3,
+    "Stat1Max": 5,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 200,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 216,
+    "Id": "abyss_murderous_small_attribute27",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Chaos Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      152
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 217,
+    "Id": "abyss_murderous_small_attribute28",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Attack Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      70
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 218,
+    "Id": "abyss_murderous_small_attribute29",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Critical Strike Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      556
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 219,
+    "Id": "abyss_murderous_small_attribute30",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Critical Strike Multiplier",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      95
+    ],
+    "Stat1Min": 7,
+    "Stat1Max": 9,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 220,
+    "Id": "abyss_murderous_small_attribute31",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Blind Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6912
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 221,
+    "Id": "abyss_murderous_small_attribute32",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Taunt Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6913
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 222,
+    "Id": "abyss_murderous_small_attribute33",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Ignite Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      194
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 223,
+    "Id": "abyss_murderous_small_attribute34",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Freeze Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      193
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 224,
+    "Id": "abyss_murderous_small_attribute35",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Shock Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      195
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 225,
+    "Id": "abyss_murderous_small_attribute36",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Poison Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      5361
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 226,
+    "Id": "abyss_murderous_small_attribute37",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Bleed Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      4500
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 227,
+    "Id": "abyss_murderous_small_attribute38",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Stun Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6199
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 228,
+    "Id": "abyss_murderous_small_attribute39",
+    "AlternateTreeVersionsKey": 7,
+    "Name": "Accuracy",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      83
+    ],
+    "Stat1Min": 31,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode2.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 229,
+    "Id": "abyss_searching_small_attribute1",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Life",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      124
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 230,
+    "Id": "abyss_searching_small_attribute2",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Mana ",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      128
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 11,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 231,
+    "Id": "abyss_searching_small_attribute3",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Energy Shield Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6874
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 232,
+    "Id": "abyss_searching_small_attribute4",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Life Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      126
+    ],
+    "Stat1Min": 270,
+    "Stat1Max": 360,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 233,
+    "Id": "abyss_searching_small_attribute5",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Mana Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      132
+    ],
+    "Stat1Min": 33,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 350,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 234,
+    "Id": "abyss_searching_small_attribute6",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Armour",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      116
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 235,
+    "Id": "abyss_searching_small_attribute7",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Evasion Rating",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      119
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 236,
+    "Id": "abyss_searching_small_attribute8",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Energy Shield",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      134
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 237,
+    "Id": "abyss_searching_small_attribute9",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Impale Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      8589
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 4,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 238,
+    "Id": "abyss_searching_small_attribute10",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Mana Recoup",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1077
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 239,
+    "Id": "abyss_searching_small_attribute11",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Cold Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12602
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 240,
+    "Id": "abyss_searching_small_attribute12",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Lightning Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12603
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 241,
+    "Id": "abyss_searching_small_attribute13",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Strength",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      576
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 242,
+    "Id": "abyss_searching_small_attribute14",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      582
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 243,
+    "Id": "abyss_searching_small_attribute15",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      579
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 244,
+    "Id": "abyss_searching_small_attribute16",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Strength and Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1391
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 245,
+    "Id": "abyss_searching_small_attribute17",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Strength and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1390
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 246,
+    "Id": "abyss_searching_small_attribute18",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Dexterity and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1392
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 247,
+    "Id": "abyss_searching_small_attribute19",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Attributes",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      607
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 248,
+    "Id": "abyss_searching_small_attribute20",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Fire Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      146
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 249,
+    "Id": "abyss_searching_small_attribute21",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      148
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 250,
+    "Id": "abyss_searching_small_attribute22",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      150
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 251,
+    "Id": "abyss_searching_small_attribute23",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Fire and Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1901
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 252,
+    "Id": "abyss_searching_small_attribute24",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Fire and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1902
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 253,
+    "Id": "abyss_searching_small_attribute25",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Cold and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1903
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 254,
+    "Id": "abyss_searching_small_attribute26",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Elemental Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      142
+    ],
+    "Stat1Min": 3,
+    "Stat1Max": 5,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 200,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 255,
+    "Id": "abyss_searching_small_attribute27",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Chaos Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      152
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 256,
+    "Id": "abyss_searching_small_attribute28",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Attack Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      70
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 257,
+    "Id": "abyss_searching_small_attribute29",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Critical Strike Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      556
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 258,
+    "Id": "abyss_searching_small_attribute30",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Critical Strike Multiplier",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      95
+    ],
+    "Stat1Min": 7,
+    "Stat1Max": 9,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 259,
+    "Id": "abyss_searching_small_attribute31",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Blind Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6912
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 260,
+    "Id": "abyss_searching_small_attribute32",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Ignite Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      194
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 261,
+    "Id": "abyss_searching_small_attribute33",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Freeze Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      193
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 262,
+    "Id": "abyss_searching_small_attribute34",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Shock Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      195
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 263,
+    "Id": "abyss_searching_small_attribute35",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Poison Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      5361
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 264,
+    "Id": "abyss_searching_small_attribute36",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Bleed Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      4500
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 265,
+    "Id": "abyss_searching_small_attribute37",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Stun Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6199
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 266,
+    "Id": "abyss_searching_small_attribute38",
+    "AlternateTreeVersionsKey": 8,
+    "Name": "Accuracy",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      83
+    ],
+    "Stat1Min": 31,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode3.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 267,
+    "Id": "abyss_hypnotic_small_attribute1",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Life",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      124
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 268,
+    "Id": "abyss_hypnotic_small_attribute2",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Mana ",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      128
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 11,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 269,
+    "Id": "abyss_hypnotic_small_attribute3",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Energy Shield Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6874
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 270,
+    "Id": "abyss_hypnotic_small_attribute4",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Life Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      126
+    ],
+    "Stat1Min": 270,
+    "Stat1Max": 360,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 271,
+    "Id": "abyss_hypnotic_small_attribute5",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Mana Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      132
+    ],
+    "Stat1Min": 33,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 350,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 272,
+    "Id": "abyss_hypnotic_small_attribute6",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Armour",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      116
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 273,
+    "Id": "abyss_hypnotic_small_attribute7",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Evasion Rating",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      119
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 274,
+    "Id": "abyss_hypnotic_small_attribute8",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Energy Shield",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      134
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 275,
+    "Id": "abyss_hypnotic_small_attribute9",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Mana Recoup",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1077
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 276,
+    "Id": "abyss_hypnotic_small_attribute10",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Cold Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12602
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 277,
+    "Id": "abyss_hypnotic_small_attribute11",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Lightning Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12603
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 278,
+    "Id": "abyss_hypnotic_small_attribute12",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Strength",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      576
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 279,
+    "Id": "abyss_hypnotic_small_attribute13",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      582
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 280,
+    "Id": "abyss_hypnotic_small_attribute14",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      579
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 281,
+    "Id": "abyss_hypnotic_small_attribute15",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Strength and Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1391
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 282,
+    "Id": "abyss_hypnotic_small_attribute16",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Strength and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1390
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 283,
+    "Id": "abyss_hypnotic_small_attribute17",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Dexterity and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1392
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 284,
+    "Id": "abyss_hypnotic_small_attribute18",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Attributes",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      607
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 285,
+    "Id": "abyss_hypnotic_small_attribute19",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Fire Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      146
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 286,
+    "Id": "abyss_hypnotic_small_attribute20",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      148
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 287,
+    "Id": "abyss_hypnotic_small_attribute21",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      150
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 288,
+    "Id": "abyss_hypnotic_small_attribute22",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Fire and Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1901
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 289,
+    "Id": "abyss_hypnotic_small_attribute23",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Fire and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1902
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 290,
+    "Id": "abyss_hypnotic_small_attribute24",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Cold and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1903
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 291,
+    "Id": "abyss_hypnotic_small_attribute25",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Elemental Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      142
+    ],
+    "Stat1Min": 3,
+    "Stat1Max": 5,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 200,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 292,
+    "Id": "abyss_hypnotic_small_attribute26",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Chaos Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      152
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 293,
+    "Id": "abyss_hypnotic_small_attribute27",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Cast Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      218
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 294,
+    "Id": "abyss_hypnotic_small_attribute28",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Critical Strike Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      556
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 295,
+    "Id": "abyss_hypnotic_small_attribute29",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Critical Strike Multiplier",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      95
+    ],
+    "Stat1Min": 7,
+    "Stat1Max": 9,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 900,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 296,
+    "Id": "abyss_hypnotic_small_attribute30",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Hinder Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6914
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 297,
+    "Id": "abyss_hypnotic_small_attribute31",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Ignite Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      194
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 298,
+    "Id": "abyss_hypnotic_small_attribute32",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Freeze Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      193
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 299,
+    "Id": "abyss_hypnotic_small_attribute33",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Shock Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      195
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 300,
+    "Id": "abyss_hypnotic_small_attribute34",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Poison Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      5361
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 301,
+    "Id": "abyss_hypnotic_small_attribute35",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Bleed Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      4500
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 302,
+    "Id": "abyss_hypnotic_small_attribute36",
+    "AlternateTreeVersionsKey": 9,
+    "Name": "Stun Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6199
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode4.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 303,
+    "Id": "abyss_ghastly_small_attribute1",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Life",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      124
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 304,
+    "Id": "abyss_ghastly_small_attribute2",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Mana ",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      128
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 11,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 305,
+    "Id": "abyss_ghastly_small_attribute3",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Energy Shield Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6874
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 306,
+    "Id": "abyss_ghastly_small_attribute4",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Life Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      126
+    ],
+    "Stat1Min": 270,
+    "Stat1Max": 360,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 307,
+    "Id": "abyss_ghastly_small_attribute5",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Mana Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      132
+    ],
+    "Stat1Min": 33,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 350,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 308,
+    "Id": "abyss_ghastly_small_attribute6",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Armour",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      116
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 309,
+    "Id": "abyss_ghastly_small_attribute7",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Evasion Rating",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      119
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 310,
+    "Id": "abyss_ghastly_small_attribute8",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Energy Shield",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      134
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 311,
+    "Id": "abyss_ghastly_small_attribute9",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Mana Recoup",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1077
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 312,
+    "Id": "abyss_ghastly_small_attribute10",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Strength",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      576
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 313,
+    "Id": "abyss_ghastly_small_attribute11",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      582
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 314,
+    "Id": "abyss_ghastly_small_attribute12",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      579
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 315,
+    "Id": "abyss_ghastly_small_attribute13",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Strength and Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1391
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 316,
+    "Id": "abyss_ghastly_small_attribute14",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Strength and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1390
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 317,
+    "Id": "abyss_ghastly_small_attribute15",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Dexterity and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1392
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 318,
+    "Id": "abyss_ghastly_small_attribute16",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Attributes",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      607
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 319,
+    "Id": "abyss_ghastly_small_attribute17",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Fire Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      146
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 320,
+    "Id": "abyss_ghastly_small_attribute18",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      148
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 321,
+    "Id": "abyss_ghastly_small_attribute19",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      150
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 322,
+    "Id": "abyss_ghastly_small_attribute20",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Fire and Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1901
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 323,
+    "Id": "abyss_ghastly_small_attribute21",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Fire and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1902
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 324,
+    "Id": "abyss_ghastly_small_attribute22",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Cold and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1903
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 325,
+    "Id": "abyss_ghastly_small_attribute23",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Elemental Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      142
+    ],
+    "Stat1Min": 3,
+    "Stat1Max": 5,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 200,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 326,
+    "Id": "abyss_ghastly_small_attribute24",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Chaos Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      152
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 327,
+    "Id": "abyss_ghastly_small_attribute25",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Cast Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      218
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 328,
+    "Id": "abyss_ghastly_small_attribute26",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Minion Blind Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6915
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 329,
+    "Id": "abyss_ghastly_small_attribute27",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Minion Taunt Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6916
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 330,
+    "Id": "abyss_ghastly_small_attribute28",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Minion Hinder Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6917
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 331,
+    "Id": "abyss_ghastly_small_attribute29",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Ignite Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      194
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 332,
+    "Id": "abyss_ghastly_small_attribute30",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Freeze Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      193
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 333,
+    "Id": "abyss_ghastly_small_attribute31",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Shock Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      195
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 334,
+    "Id": "abyss_ghastly_small_attribute32",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Poison Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      5361
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 335,
+    "Id": "abyss_ghastly_small_attribute33",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Bleed Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      4500
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 336,
+    "Id": "abyss_ghastly_small_attribute34",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Stun Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6199
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 337,
+    "Id": "abyss_ghastly_small_attribute35",
+    "AlternateTreeVersionsKey": 10,
+    "Name": "Minion Attack and Cast Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      2137,
+      2138
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 2,
+    "Stat2Max": 3,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLichNode1.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 338,
+    "Id": "abyss_special_small_attribute1",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Life",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      124
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 339,
+    "Id": "abyss_special_small_attribute2",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Mana ",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      128
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 11,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 340,
+    "Id": "abyss_special_small_attribute3",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Energy Shield Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6874
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 341,
+    "Id": "abyss_special_small_attribute4",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Life Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      126
+    ],
+    "Stat1Min": 270,
+    "Stat1Max": 360,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 342,
+    "Id": "abyss_special_small_attribute5",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Mana Regeneration",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      132
+    ],
+    "Stat1Min": 33,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 350,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 343,
+    "Id": "abyss_special_small_attribute6",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Armour",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      116
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 344,
+    "Id": "abyss_special_small_attribute7",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Evasion Rating",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      119
+    ],
+    "Stat1Min": 36,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 345,
+    "Id": "abyss_special_small_attribute8",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Energy Shield",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      134
+    ],
+    "Stat1Min": 9,
+    "Stat1Max": 12,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 346,
+    "Id": "abyss_special_small_attribute9",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Mana Recoup",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1077
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 347,
+    "Id": "abyss_special_small_attribute10",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Strength",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      576
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 348,
+    "Id": "abyss_special_small_attribute11",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      582
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 349,
+    "Id": "abyss_special_small_attribute12",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      579
+    ],
+    "Stat1Min": 8,
+    "Stat1Max": 10,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 350,
+    "Id": "abyss_special_small_attribute13",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Strength and Dexterity",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1391
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 351,
+    "Id": "abyss_special_small_attribute14",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Strength and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1390
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 352,
+    "Id": "abyss_special_small_attribute15",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Dexterity and Intelligence",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1392
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 353,
+    "Id": "abyss_special_small_attribute16",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Attributes",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      607
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 354,
+    "Id": "abyss_special_small_attribute17",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Fire Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      146
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 355,
+    "Id": "abyss_special_small_attribute18",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      148
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 356,
+    "Id": "abyss_special_small_attribute19",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      150
+    ],
+    "Stat1Min": 6,
+    "Stat1Max": 8,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 357,
+    "Id": "abyss_special_small_attribute20",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Fire and Cold Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1901
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 358,
+    "Id": "abyss_special_small_attribute21",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Fire and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1902
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 359,
+    "Id": "abyss_special_small_attribute22",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Cold and Lightning Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      1903
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 250,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 360,
+    "Id": "abyss_special_small_attribute23",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Elemental Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      142
+    ],
+    "Stat1Min": 3,
+    "Stat1Max": 5,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 200,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 361,
+    "Id": "abyss_special_small_attribute24",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Chaos Resistance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      152
+    ],
+    "Stat1Min": 4,
+    "Stat1Max": 6,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 100,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 362,
+    "Id": "abyss_special_small_attribute25",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Cast Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      218
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 363,
+    "Id": "abyss_special_small_attribute26",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Minion Blind Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6915
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 364,
+    "Id": "abyss_special_small_attribute27",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Minion Taunt Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6916
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 365,
+    "Id": "abyss_special_small_attribute28",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Minion Hinder Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6917
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 366,
+    "Id": "abyss_special_small_attribute29",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Ignite Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      194
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 367,
+    "Id": "abyss_special_small_attribute30",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Freeze Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      193
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 368,
+    "Id": "abyss_special_small_attribute31",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Shock Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      195
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 369,
+    "Id": "abyss_special_small_attribute32",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Poison Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      5361
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 370,
+    "Id": "abyss_special_small_attribute33",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Bleed Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      4500
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 371,
+    "Id": "abyss_special_small_attribute34",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Stun Avoidance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6199
+    ],
+    "Stat1Min": 15,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 225,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 372,
+    "Id": "abyss_special_small_attribute35",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Minion Attack and Cast Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      2137,
+      2138
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 2,
+    "Stat2Max": 3,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 373,
+    "Id": "abyss_special_small_attribute36",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Hinder Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6914
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 374,
+    "Id": "abyss_special_small_attribute37",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Cold Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12602
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 375,
+    "Id": "abyss_special_small_attribute38",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Lightning Ailment Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      12603
+    ],
+    "Stat1Min": 10,
+    "Stat1Max": 20,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 376,
+    "Id": "abyss_special_small_attribute39",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Blind Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6912
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 377,
+    "Id": "abyss_special_small_attribute40",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Accuracy",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      83
+    ],
+    "Stat1Min": 31,
+    "Stat1Max": 60,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 500,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 378,
+    "Id": "abyss_special_small_attribute41",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Attack Speed",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      70
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 379,
+    "Id": "abyss_special_small_attribute42",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Impale Effect",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      8589
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 4,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 300,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
+    "AchievementItemsKeys": [],
+    "Unknown25": 0,
+    "Unknown26": 100
+  },
+  {
+    "_rid": 380,
+    "Id": "abyss_special_small_attribute43",
+    "AlternateTreeVersionsKey": 11,
+    "Name": "Taunt Chance",
+    "PassiveType": [
+      1,
+      2
+    ],
+    "StatsKeys": [
+      6913
+    ],
+    "Stat1Min": 2,
+    "Stat1Max": 3,
+    "Stat2Min": 0,
+    "Stat2Max": 0,
+    "Unknown10": 0,
+    "Unknown11": 0,
+    "Unknown12": 0,
+    "Unknown13": 0,
+    "Unknown14": 0,
+    "Unknown15": 0,
+    "Unknown16": 0,
+    "Unknown17": 0,
+    "SpawnWeight": 400,
+    "Unknown19": 0,
+    "RandomMin": 0,
+    "RandomMax": 0,
+    "FlavourText": "",
+    "DDSIcon": "Art/2DArt/SkillIcons/passives/AbyssRevampGazeoftheLich.dds",
     "AchievementItemsKeys": [],
     "Unknown25": 0,
     "Unknown26": 100

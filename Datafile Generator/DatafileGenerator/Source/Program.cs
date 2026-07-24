@@ -19,7 +19,7 @@ public static class Program
     private const int LegacyOfTheVaal = 77;
     private const int MaxBytesInFile = 5242880; //5MB
     private const int ExpectedArgumentCount = 5;
-    private const int MaxJewelType = 6;
+    private const int MaxJewelType = 11;
     private static int NumAdditions;
     private static bool IsInteractiveMode = true;
     private static IReadOnlyDictionary<uint, AlternateTreeVersion> AlternateTreeVersionsByIndex;
@@ -90,9 +90,9 @@ public static class Program
         }
         File.WriteAllText(Path.Combine(outputDir, CsvFileName), sb.ToString());
         sb.Clear();
-        //begin iterating over the 6 jewel types
+        //begin iterating over the 11 jewel types
         //reverse order since glorious vanity sucks
-        for (int i = 6; i > 0; i--)
+        for (int i = 11; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
             GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
@@ -441,6 +441,36 @@ public static class Program
                 jewelMax = 8000;
                 jewelIncrement = 1;
                 jewelName = "HeroicTragedy";
+                break;
+            case 7:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "AbyssTecrod";
+                break;
+            case 8:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "AbyssUlaman";
+                break;
+            case 9:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "AbyssKurgal";
+                break;
+            case 10:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "AbyssAmanamu";
+                break;
+            case 11:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "AbyssZorath";
                 break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
