@@ -41,7 +41,12 @@ public static class DataManager
             new AlternateTreeVersion(3),
             new AlternateTreeVersion(4),
             new AlternateTreeVersion(5),
-            new AlternateTreeVersion(6)
+            new AlternateTreeVersion(6),
+            new AlternateTreeVersion(7),
+            new AlternateTreeVersion(8),
+            new AlternateTreeVersion(9),
+            new AlternateTreeVersion(10),
+            new AlternateTreeVersion(11)
         };
 
     public static List<AlternatePassiveAddition> GetApplicableAlternatePassiveAdditions(PassiveSkill passiveSkill, TimelessJewel timelessJewel)

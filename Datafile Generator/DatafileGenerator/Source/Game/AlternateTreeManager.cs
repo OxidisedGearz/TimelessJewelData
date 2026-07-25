@@ -118,21 +118,21 @@ public class AlternateTreeManager
             while (rolledAlternatePassiveAddition == null)
                 rolledAlternatePassiveAddition = RollAlternatePassiveAddition(randomNumberGenerator);
 
-            Dictionary<uint, (uint minimumRoll, uint maximumRoll)> alternatePassiveAdditionStatRollRanges = new Dictionary<uint, (uint minimumRoll, uint maximumRoll)>()
+            Dictionary<int, (int minimumRoll, int maximumRoll)> alternatePassiveAdditionStatRollRanges = new Dictionary<int, (int minimumRoll, int maximumRoll)>()
             {
                 { 0, (rolledAlternatePassiveAddition.StatAMinimumValue, rolledAlternatePassiveAddition.StatAMaximumValue) },
                 { 1, (rolledAlternatePassiveAddition.StatBMinimumValue, rolledAlternatePassiveAddition.StatBMaximumValue) }
             };
 
-            Dictionary<uint, uint> alternatePassiveAdditionStatRolls = new Dictionary<uint, uint>();
+            Dictionary<int, int> alternatePassiveAdditionStatRolls = new Dictionary<int, int>();
 
             // Capping the maximum iterations at 2 for now.
-            for (uint j = 0; j < Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2); j++)
+            for (int j = 0; j < Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2); j++)
             {
-                uint alternatePassiveAdditionStatRoll = alternatePassiveAdditionStatRollRanges[j].minimumRoll;
+                int alternatePassiveAdditionStatRoll = alternatePassiveAdditionStatRollRanges[j].minimumRoll;
 
                 if (alternatePassiveAdditionStatRollRanges[j].maximumRoll > alternatePassiveAdditionStatRollRanges[j].minimumRoll)
-                    alternatePassiveAdditionStatRoll = randomNumberGenerator.Generate(alternatePassiveAdditionStatRollRanges[j].minimumRoll, alternatePassiveAdditionStatRollRanges[j].maximumRoll);
+                    alternatePassiveAdditionStatRoll = (int)randomNumberGenerator.Generate((uint)alternatePassiveAdditionStatRollRanges[j].minimumRoll, (uint)alternatePassiveAdditionStatRollRanges[j].maximumRoll);
 
                 alternatePassiveAdditionStatRolls.Add(j, alternatePassiveAdditionStatRoll);
             }
@@ -167,21 +167,21 @@ public class AlternateTreeManager
             while (rolledAlternatePassiveAddition == null)
                 rolledAlternatePassiveAddition = RollAlternatePassiveAddition(randomNumberGenerator);
 
-            Dictionary<uint, (uint minimumRoll, uint maximumRoll)> alternatePassiveAdditionStatRollRanges = new Dictionary<uint, (uint minimumRoll, uint maximumRoll)>()
+            Dictionary<int, (int minimumRoll, int maximumRoll)> alternatePassiveAdditionStatRollRanges = new Dictionary<int, (int minimumRoll, int maximumRoll)>()
             {
                 { 0, (rolledAlternatePassiveAddition.StatAMinimumValue, rolledAlternatePassiveAddition.StatAMaximumValue) },
                 { 1, (rolledAlternatePassiveAddition.StatBMinimumValue, rolledAlternatePassiveAddition.StatBMaximumValue) }
             };
 
-            Dictionary<uint, uint> alternatePassiveAdditionStatRolls = new Dictionary<uint, uint>();
+            Dictionary<int, int> alternatePassiveAdditionStatRolls = new Dictionary<int, int>();
 
             // Capping the maximum iterations at 2 for now.
-            for (uint j = 0; j < Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2); j++)
+            for (int j = 0; j < Math.Min(rolledAlternatePassiveAddition.StatIndices.Count, 2); j++)
             {
-                uint alternatePassiveAdditionStatRoll = alternatePassiveAdditionStatRollRanges[j].minimumRoll;
+                int alternatePassiveAdditionStatRoll = alternatePassiveAdditionStatRollRanges[j].minimumRoll;
 
                 if (alternatePassiveAdditionStatRollRanges[j].maximumRoll > alternatePassiveAdditionStatRollRanges[j].minimumRoll)
-                    alternatePassiveAdditionStatRoll = randomNumberGenerator.Generate(alternatePassiveAdditionStatRollRanges[j].minimumRoll, alternatePassiveAdditionStatRollRanges[j].maximumRoll);
+                    alternatePassiveAdditionStatRoll = (int)randomNumberGenerator.Generate((uint)alternatePassiveAdditionStatRollRanges[j].minimumRoll, (uint)alternatePassiveAdditionStatRollRanges[j].maximumRoll);
 
                 alternatePassiveAdditionStatRolls.Add(j, alternatePassiveAdditionStatRoll);
             }

@@ -127,6 +127,10 @@ public static class Program
                 File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName), sb.ToString());
                 sb.Clear();
             }
+            else if (i>=7 && i<=11)
+            {
+                GenerateUndyingHate(notablesThenSmalls, isCsvExport, i, notableJewelSocketMappings, out var luaSizes, out dataBuffer, out csvExport);
+            }
             //non-glorious vanity logic
             else
             {
@@ -262,7 +266,7 @@ public static class Program
                     {
                         //add the additions
                         indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index]);
-                        rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0U]);
+                        rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0]);
                     }
                 }
                 //handle all others
@@ -281,6 +285,113 @@ public static class Program
                 data2d[nodeIndex * maxSeed + jewelIndex] = dataEntry.ToArray();
 
                 if(isCsvExport){
+                    var exportRow = new CsvExportRow(
+                        jewelSeed,
+                        jewelName,
+                        jewelType,
+                        node,
+                        (uint)nodeIndex,
+                        skillInfo.AlternatePassiveSkill.Name,
+                        notableJewelSocketMappings
+                    );
+                    // A JewelSocketId of 0 indicates that the notable does not appear
+                    // in the radius of a jewel socket...so don't export it to the CSV
+                    if (exportRow.JewelSocketId > 0)
+                    {
+                        export.Add(exportRow);
+                    }
+                }
+            });
+        });
+        //write the data
+        var outputData = new List<byte>(header);
+        foreach (var entry in data2d.Where(d => d is not null))
+        {
+            outputData.AddRange(entry);
+        }
+        luaDefinitions = new int[nodes.Count];
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            luaDefinitions[i] = header.Skip(i * maxSeed).Take(maxSeed).Sum(x => x);
+        }
+        data = outputData.ToArray();
+        csvData = export.ToList();
+    }
+
+    private static void GenerateUndyingHate(List<PassiveSkill> nodes, bool isCsvExport, int jewelType, Dictionary<string, int> notableJewelSocketMappings, out int[] luaDefinitions, out byte[] data, out List<CsvExportRow> csvData)
+    {
+        GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
+        int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
+        //the datafile header. cant use out params in anonymous methods
+        byte[] header = new byte[maxSeed * nodes.Count];
+        //the actual information for the jewels. will convert to 1d later
+        byte[][] data2d = new byte[maxSeed * nodes.Count][];
+
+        //re-index our additions and replacements to consider only this jewel type
+        uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
+        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index)
+            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index + numAdditions))
+            .Select((x, i) => new { rid = x, index = (byte)i }).ToDictionary(x => x.rid, x => x.index);
+        if (jewelEffectOptions.Count > 256)
+        {
+            throw new Exception("Cannot safely construct file: possible indices greater than byte size");
+        }
+        var export = new ConcurrentBag<CsvExportRow>();
+        //nested parallel tasks, in case your cpu wasn't on fire yet
+        Parallel.For(0, nodes.Count, nodeIndex =>
+        {
+            var node = nodes[nodeIndex];
+            if (isCsvExport && !node.IsNotable)
+            {
+                // The CSV export only includes notables, so skip small nodes to save time on the alternate tree calculations
+                return;
+            }
+
+            Parallel.For(jewelMin / jewelIncrement, jewelMax / jewelIncrement + 1, i =>
+            {
+                //which jewel seed is this
+                i *= jewelIncrement;
+                int jewelSeed = i;
+                int jewelIndex = (jewelSeed - jewelMin) / jewelIncrement;
+                int jewelType = 1;
+                //modify the tree using that jewel
+                TimelessJewel timelessJewelFromInput = GetTimelessJewel((uint)jewelSeed, (uint)jewelType);
+                if (timelessJewelFromInput == null)
+                    Program.ExitWithError("Failed to get the [yellow]timeless jewel[/] from input.");
+                //determine how the particular node was modified
+                var alternateTreeManager = new AlternateTreeManager(node, timelessJewelFromInput);
+                //GV will always replace nodes
+                var indices = new List<byte>();
+                var rolls = new List<byte>();
+                var skillInfo = alternateTreeManager.ReplacePassiveSkill();
+                //handle might/legacy of the vaal
+                if (skillInfo.AlternatePassiveSkill.Index == LegacyOfTheVaal || skillInfo.AlternatePassiveSkill.Index == MightOfTheVaal)
+                {
+                    //just shit out the stats, the fact that its legacy/might is implied
+                    for (int k = 0; k < skillInfo.AlternatePassiveAdditionInformations.Count; k++)
+                    {
+                        //add the additions
+                        indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index]);
+                        rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0]);
+                    }
+                }
+                //handle all others
+                else
+                {
+                    indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveSkill.Index + numAdditions]);
+                    for (int k = 0; k < skillInfo.StatRolls.Count; k++)
+                    {
+                        rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
+                    }
+                }
+                //save the data
+                var dataEntry = new List<byte>(indices);
+                dataEntry.AddRange(rolls);
+                header[nodeIndex * maxSeed + jewelIndex] = (byte)dataEntry.Count;
+                data2d[nodeIndex * maxSeed + jewelIndex] = dataEntry.ToArray();
+
+                if (isCsvExport)
+                {
                     var exportRow = new CsvExportRow(
                         jewelSeed,
                         jewelName,
@@ -451,7 +562,31 @@ public static class Program
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHate";
+                jewelName = "UndyingHateMurderous";
+                break;
+            case 8:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "UndyingHateSearching";
+                break;
+            case 9:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "UndyingHateHypnotic";
+                break;
+            case 10:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "UndyingHateGhastly";
+                break;
+            case 11:
+                jewelMin = 100;
+                jewelMax = 8000;
+                jewelIncrement = 1;
+                jewelName = "UndyingHateSpecial";
                 break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
