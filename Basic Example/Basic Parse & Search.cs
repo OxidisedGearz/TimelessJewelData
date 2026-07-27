@@ -36,10 +36,6 @@ private static IEnumerable<Tuple<int, double>> ExecuteNonGVSearch(Dictionary<int
             minSeed = 100;
             maxSeed = 8000;
             break;
-        case 7:
-            minSeed = 100;
-            maxSeed = 8000;
-            break;
         default:
             break;
     }
@@ -157,9 +153,6 @@ private static FileStream? GetStreamForJewel(int jewelType)
             break;
         case 6:
             fileName = "HeroicTragedy";
-            break;
-        case 7:
-            fileName = "UndyingHate";
             break;
         default:
             return null;
