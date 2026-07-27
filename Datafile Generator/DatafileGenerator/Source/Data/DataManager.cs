@@ -56,10 +56,10 @@ public static class DataManager
 
         List<AlternatePassiveAddition> applicableAlternatePassiveAdditions = new List<AlternatePassiveAddition>();
 
+        PassiveSkillType passiveSkillType = GetPassiveSkillType(passiveSkill);
+
         foreach (AlternatePassiveAddition alternatePassiveAddition in AlternatePassiveAdditions)
         {
-            PassiveSkillType passiveSkillType = GetPassiveSkillType(passiveSkill);
-
             if ((alternatePassiveAddition.AlternateTreeVersionIndex != timelessJewel.AlternateTreeVersion.Index) ||
                 !alternatePassiveAddition.ApplicablePassiveTypes.Any(q => (q == ((uint)passiveSkillType))))
             {
@@ -84,6 +84,18 @@ public static class DataManager
 
         return alternatePassiveSkillKeyStone;
     }
+    public static AlternatePassiveSkill GetAlternatePassiveSkillAscendancy(TimelessJewel timelessJewel)
+    {
+        ArgumentNullException.ThrowIfNull(timelessJewel, nameof(timelessJewel));
+
+        AlternatePassiveSkill alternatePassiveSkillKeyStone = AlternatePassiveSkills.FirstOrDefault(q =>
+            q.AlternateTreeVersionIndex == timelessJewel.AlternateTreeVersion.Index);
+
+        if (!alternatePassiveSkillKeyStone.ApplicablePassiveTypes.Any(q => (q == ((uint)PassiveSkillType.AscendancyNotable))))
+            return null;
+
+        return alternatePassiveSkillKeyStone;
+    }
 
     public static List<AlternatePassiveSkill> GetApplicableAlternatePassiveSkills(PassiveSkill passiveSkill, TimelessJewel timelessJewel)
     {
@@ -92,10 +104,10 @@ public static class DataManager
 
         List<AlternatePassiveSkill> applicableAlternatePassiveSkills = new List<AlternatePassiveSkill>();
 
+        PassiveSkillType passiveSkillType = GetPassiveSkillType(passiveSkill);
+
         foreach (AlternatePassiveSkill alternatePassiveSkill in AlternatePassiveSkills)
         {
-            PassiveSkillType passiveSkillType = GetPassiveSkillType(passiveSkill);
-
             if ((alternatePassiveSkill.AlternateTreeVersionIndex != timelessJewel.AlternateTreeVersion.Index) ||
                 !alternatePassiveSkill.ApplicablePassiveTypes.Any(q => (q == ((uint)passiveSkillType))))
             {
@@ -111,6 +123,9 @@ public static class DataManager
     public static PassiveSkillType GetPassiveSkillType(PassiveSkill passiveSkill)
     {
         ArgumentNullException.ThrowIfNull(passiveSkill, nameof(passiveSkill));
+
+        if (passiveSkill.IsAscendancy && passiveSkill.IsNotable)
+            return PassiveSkillType.AscendancyNotable;
 
         if (passiveSkill.IsJewelSocket)
             return PassiveSkillType.JewelSocket;

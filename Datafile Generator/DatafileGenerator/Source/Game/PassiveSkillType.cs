@@ -7,5 +7,6 @@ public enum PassiveSkillType
     SmallNormal,
     Notable,
     KeyStone,
+    AscendancyNotable,
     JewelSocket
 }

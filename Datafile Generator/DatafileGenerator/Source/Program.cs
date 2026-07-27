@@ -23,8 +23,8 @@ public static class Program
     private const int MightOfTheVaal = 76;
     private const int LegacyOfTheVaal = 77;
     private const int MaxBytesInFile = 5242880; //5MB
-    private static int NumAdditions;
-    private const string LuaMappingFileName = "NodeIndexMapping.lua";
+    private const string LuaMappingFileName = "NodeIndexMapping";
+    private const string LuaMappingFileType = ".lua";
     private const string CsvFileName = "node_indices.csv";
 
     public static void Main()
@@ -65,7 +65,6 @@ public static class Program
 
         if (!DataManager.Initialize())
             ExitWithError("Failed to initialize the [yellow]data manager[/].");
-        NumAdditions = DataManager.AlternatePassiveAdditions.Count;
         if (!Directory.Exists(outputDir))
             Directory.CreateDirectory(outputDir);
 
@@ -80,19 +79,24 @@ public static class Program
 
         var justNotables = GetModifiableNodes(true);
         var justSmallNodes = GetModifiableNodes(false);
+        var justAscendancies = GetAscendancyNotables();
         justNotables.Sort();
         justSmallNodes.Sort();
+        justAscendancies.Sort();
         //generate our indices
         var notablesThenSmalls = justNotables.ToList();
         notablesThenSmalls.AddRange(justSmallNodes);
+        var allNodes = notablesThenSmalls.ToList();
+        allNodes.AddRange(justAscendancies);
+
         AnsiConsole.MarkupLine("[green]Processing[/]...");
         //build the csv
         if (File.Exists(CsvFileName))
             File.Delete(CsvFileName);
         var sb = new StringBuilder("PassiveSkillGraphId,Name,Datafile Parsing Index\n");
-        for (int k = 0; k < notablesThenSmalls.Count; k++)
+        for (int k = 0; k < allNodes.Count; k++)
         {
-            var node = notablesThenSmalls[k];
+            var node = allNodes[k];
             sb.AppendLine(node.GraphIdentifier + "," + (node.Name.Contains(',') ? ("\"" + node.Name + "\"") : node.Name) + "," + k);
         }
         File.WriteAllText(Path.Combine(outputDir, CsvFileName), sb.ToString());
@@ -101,16 +105,15 @@ public static class Program
         //reverse order since glorious vanity sucks
         string outputPath = null;
         List<CsvExportRow> csvExport;
-        for (int i = 7; i > 0; i--)
+        for (int i = 11; i > 0; i--)
         {
             var sw = Stopwatch.StartNew();
-            GetJewelTypeInfo(i, out _, out _, out _, out string outputFile);
+            GetJewelTypeInfo(i, out _, out _, out _, out string jewelName);
+            AnsiConsole.MarkupLine($"[green]Calculating {jewelName}[/]...");
             byte[] dataBuffer;
             //glorious vanity logic
             if (i == 1)
             {
-                AnsiConsole.MarkupLine("[green]Calculating Glorious Vanity seeds[/]...");
-
                 //calculate
                 GenerateGloriousVanity(notablesThenSmalls, isCsvExport, notableJewelSocketMappings, out var luaSizes, out dataBuffer, out csvExport);
                 //create the lua mapping file
@@ -124,14 +127,33 @@ public static class Program
                     sb.AppendLine($"nodeIDList[{node.GraphIdentifier}] = {{ index = {k}, size = {luaSizes[k]} }}");
                 }
                 sb.Append("return nodeIDList");
-                File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName), sb.ToString());
+                File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName + jewelName + LuaMappingFileType), sb.ToString());
                 sb.Clear();
             }
+            //abyssal logic
             else if (i>=7 && i<=11)
             {
-                GenerateUndyingHate(notablesThenSmalls, isCsvExport, i, notableJewelSocketMappings, out var luaSizes, out dataBuffer, out csvExport);
+                var nodesInPlay = i == 11 ? allNodes : notablesThenSmalls;
+                GenerateAbyssal(nodesInPlay, isCsvExport, i, notableJewelSocketMappings, out var luaSizes, out dataBuffer, out csvExport);
+                //create the lua mapping file
+                sb.Clear();
+                sb.AppendLine("nodeIDList = { }");
+                sb.AppendLine($"nodeIDList[\"size\"] = {nodesInPlay.Count}");
+                sb.AppendLine($"nodeIDList[\"sizeNotable\"] = {justNotables.Count}");
+                if (i==11)
+                {
+                    sb.AppendLine($"nodeIDList[\"sizeSmall\"] = {justSmallNodes.Count}");
+                }
+                for (int k = 0; k < nodesInPlay.Count; k++)
+                {
+                    var node = nodesInPlay[k];
+                    sb.AppendLine($"nodeIDList[{node.GraphIdentifier}] = {{ index = {k}, size = {luaSizes[k]} }}");
+                }
+                sb.Append("return nodeIDList");
+                File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName + jewelName + LuaMappingFileType), sb.ToString());
+                sb.Clear();
             }
-            //non-glorious vanity logic
+            //standard logic
             else
             {
                 GenerateRegular(justNotables, isCsvExport, i, notableJewelSocketMappings, out dataBuffer, out csvExport);
@@ -140,7 +162,7 @@ public static class Program
             if (compression == OutputUncompressedFiles || compression == OutputBothFileFormats)
             {
                 AnsiConsole.MarkupLine("[green]Generating uncompressed output file[/]...");
-                outputPath = Path.Combine(outputDir, outputFile);
+                outputPath = Path.Combine(outputDir, jewelName);
                 if (File.Exists(outputPath))
                 {
                     File.Delete(outputPath);
@@ -155,7 +177,7 @@ public static class Program
             {
                 AnsiConsole.MarkupLine("[green]Generating compressed output file[/]...");
                 byte[] compressedData = Compress(dataBuffer);
-                //need to split into multiple files because PoB is dumb
+                //need to split into multiple files because PoB was dumb
                 if (compressedData.Length > MaxBytesInFile)
                 {
                     int splitIndex = 0;
@@ -163,7 +185,7 @@ public static class Program
                     while (split.Any())
                     {
                         //write the data
-                        outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, $"zip.part{splitIndex}"));
+                        outputPath = Path.Combine(outputDir, Path.ChangeExtension(jewelName, $"zip.part{splitIndex}"));
                         if (File.Exists(outputPath))
                         {
                             File.Delete(outputPath);
@@ -178,7 +200,7 @@ public static class Program
                 //file is small enough as is, just write the file
                 else
                 {
-                    outputPath = Path.Combine(outputDir, Path.ChangeExtension(outputFile, "zip"));
+                    outputPath = Path.Combine(outputDir, Path.ChangeExtension(jewelName, "zip"));
                     if (File.Exists(outputPath))
                     {
                         File.Delete(outputPath);
@@ -193,12 +215,12 @@ public static class Program
             {
                 AnsiConsole.MarkupLine("[green]Generating GZipped CSV file[/]...");
 
-                outputPath = CreateCSVFile(csvExport, outputDir, outputFile, compressCSVOutput);
+                outputPath = CreateCSVFile(csvExport, outputDir, jewelName, compressCSVOutput);
                 
             }
             //log completion
             sw.Stop();
-            AnsiConsole.MarkupLine($"{outputFile} took {string.Format("{0:0.##}", sw.Elapsed.TotalSeconds)} seconds");
+            AnsiConsole.MarkupLine($"{jewelName} took {string.Format("{0:0.##}", sw.Elapsed.TotalSeconds)} seconds");
             if (outputPath != null)
             {
                 AnsiConsole.MarkupLine($"[blue]File available at:[/] {outputPath}");
@@ -210,6 +232,11 @@ public static class Program
     private static List<PassiveSkill> GetModifiableNodes(bool notables)
     {
         return DataManager.PassiveSkills.Where(x => x.IsModifiable && (!notables ^ x.IsNotable)).ToList();
+    }
+
+    private static List<PassiveSkill> GetAscendancyNotables()
+    {
+        return DataManager.PassiveSkills.Where(x => x.IsAscendancy && x.IsNotable).ToList();
     }
 
     private static void GenerateGloriousVanity(List<PassiveSkill> nodes, bool isCsvExport, Dictionary<string, int> notableJewelSocketMappings, out int[] luaDefinitions, out byte[] data, out List<CsvExportRow> csvData)
@@ -318,9 +345,9 @@ public static class Program
         csvData = export.ToList();
     }
 
-    private static void GenerateUndyingHate(List<PassiveSkill> nodes, bool isCsvExport, int jewelType, Dictionary<string, int> notableJewelSocketMappings, out int[] luaDefinitions, out byte[] data, out List<CsvExportRow> csvData)
+    private static void GenerateAbyssal(List<PassiveSkill> nodes, bool isCsvExport, int jewelType, Dictionary<string, int> notableJewelSocketMappings, out int[] luaDefinitions, out byte[] data, out List<CsvExportRow> csvData)
     {
-        GetJewelTypeInfo(1, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
+        GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         //the datafile header. cant use out params in anonymous methods
         byte[] header = new byte[maxSeed * nodes.Count];
@@ -329,8 +356,8 @@ public static class Program
 
         //re-index our additions and replacements to consider only this jewel type
         uint numAdditions = (uint)DataManager.AlternatePassiveAdditions.Count;
-        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index)
-            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == 1).Select(x => x.Index + numAdditions))
+        var jewelEffectOptions = DataManager.AlternatePassiveAdditions.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index)
+            .Concat(DataManager.AlternatePassiveSkills.Where(x => x.AlternateTreeVersionIndex == jewelType).Select(x => x.Index + numAdditions))
             .Select((x, i) => new { rid = x, index = (byte)i }).ToDictionary(x => x.rid, x => x.index);
         if (jewelEffectOptions.Count > 256)
         {
@@ -353,60 +380,51 @@ public static class Program
                 i *= jewelIncrement;
                 int jewelSeed = i;
                 int jewelIndex = (jewelSeed - jewelMin) / jewelIncrement;
-                int jewelType = 1;
                 //modify the tree using that jewel
                 TimelessJewel timelessJewelFromInput = GetTimelessJewel((uint)jewelSeed, (uint)jewelType);
                 if (timelessJewelFromInput == null)
                     Program.ExitWithError("Failed to get the [yellow]timeless jewel[/] from input.");
                 //determine how the particular node was modified
                 var alternateTreeManager = new AlternateTreeManager(node, timelessJewelFromInput);
-                //GV will always replace nodes
-                var indices = new List<byte>();
+                bool flag = node.IsAscendancy || alternateTreeManager.IsPassiveSkillReplaced();
+                byte passiveSkillIndex = 0;
+                uint notableAlternatePassiveIndex = 0;
+                string notableReplacementName = string.Empty;
                 var rolls = new List<byte>();
-                var skillInfo = alternateTreeManager.ReplacePassiveSkill();
-                //handle might/legacy of the vaal
-                if (skillInfo.AlternatePassiveSkill.Index == LegacyOfTheVaal || skillInfo.AlternatePassiveSkill.Index == MightOfTheVaal)
+                if (flag)
                 {
-                    //just shit out the stats, the fact that its legacy/might is implied
-                    for (int k = 0; k < skillInfo.AlternatePassiveAdditionInformations.Count; k++)
-                    {
-                        //add the additions
-                        indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).AlternatePassiveAddition.Index]);
-                        rolls.Add((byte)skillInfo.AlternatePassiveAdditionInformations.ElementAt(k).StatRolls[0]);
-                    }
-                }
-                //handle all others
-                else
-                {
-                    indices.Add(jewelEffectOptions[skillInfo.AlternatePassiveSkill.Index + numAdditions]);
+                    var skillInfo = alternateTreeManager.ReplacePassiveSkill();
+                    notableAlternatePassiveIndex = skillInfo.AlternatePassiveSkill.Index;
+                    passiveSkillIndex = jewelEffectOptions[notableAlternatePassiveIndex + numAdditions];
                     for (int k = 0; k < skillInfo.StatRolls.Count; k++)
                     {
                         rolls.Add((byte)skillInfo.StatRolls[(uint)k]);
                     }
                 }
+                else
+                {
+                    var skillInfo = alternateTreeManager.AugmentPassiveSkill().FirstOrDefault();
+                    notableAlternatePassiveIndex = skillInfo?.AlternatePassiveAddition.Index ?? 0;
+                    passiveSkillIndex = jewelEffectOptions[notableAlternatePassiveIndex];
+                    for (int k = 0; k < skillInfo.StatRolls.Count; k++)
+                    {
+                        rolls.Add((byte)skillInfo.StatRolls[k]);
+                    }
+                }
                 //save the data
-                var dataEntry = new List<byte>(indices);
+                var dataEntry = new List<byte>
+                {
+                    passiveSkillIndex
+                };
                 dataEntry.AddRange(rolls);
                 header[nodeIndex * maxSeed + jewelIndex] = (byte)dataEntry.Count;
                 data2d[nodeIndex * maxSeed + jewelIndex] = dataEntry.ToArray();
 
                 if (isCsvExport)
                 {
-                    var exportRow = new CsvExportRow(
-                        jewelSeed,
-                        jewelName,
-                        jewelType,
-                        node,
-                        (uint)nodeIndex,
-                        skillInfo.AlternatePassiveSkill.Name,
-                        notableJewelSocketMappings
-                    );
-                    // A JewelSocketId of 0 indicates that the notable does not appear
-                    // in the radius of a jewel socket...so don't export it to the CSV
-                    if (exportRow.JewelSocketId > 0)
-                    {
-                        export.Add(exportRow);
-                    }
+                    //apparently this jewel snakes from the jewel socket to your starting node
+                    //then modifies one of your ascendancy nodes
+                    //so the logic of "is this in radius of a jewel socket" does not apply
                 }
             });
         });
@@ -429,8 +447,6 @@ public static class Program
     {
         GetJewelTypeInfo(jewelType, out int jewelMin, out int jewelMax, out int jewelIncrement, out string jewelName);
 
-        AnsiConsole.MarkupLine($"[green]Calculating {jewelName} seeds[/]...");
-
         int maxSeed = (jewelMax - jewelMin) / jewelIncrement + 1;
         byte[] dataInternal = new byte[maxSeed * nodes.Count];
         //re-index our additions and replacements to consider only this jewel type
@@ -452,7 +468,7 @@ public static class Program
             notableJewelReplacementNames = DataManager.AlternatePassiveSkills
                 .Where(x => x.AlternateTreeVersionIndex == jewelType)
                 .ToDictionary(x => x.Index, x => x.Name);
-        }        
+        }
 
         if (jewelEffectOptions.Count > 256)
         {
@@ -562,31 +578,31 @@ public static class Program
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHateMurderous";
+                jewelName = "FesteringVengeance";
                 break;
             case 8:
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHateSearching";
+                jewelName = "ExtinguishingGrasp";
                 break;
             case 9:
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHateHypnotic";
+                jewelName = "BalefulDominion";
                 break;
             case 10:
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHateGhastly";
+                jewelName = "DestructiveAspirations";
                 break;
             case 11:
                 jewelMin = 100;
                 jewelMax = 8000;
                 jewelIncrement = 1;
-                jewelName = "UndyingHateSpecial";
+                jewelName = "ReclaimedMalevolence";
                 break;
             default:
                 ExitWithError($"Unrecognized jewel type code: [yellow]{jewelType}[/].");
