@@ -5,6 +5,8 @@ namespace DatafileGenerator.Data.Models;
 
 public class AlternatePassiveAddition
 {
+    [JsonPropertyName("Id")]
+    public string Id { get; init; }
 
     [JsonPropertyName("_rid")]
     public uint Index { get; init; }

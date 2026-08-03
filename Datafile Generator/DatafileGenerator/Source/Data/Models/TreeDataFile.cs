@@ -7,5 +7,8 @@ namespace DatafileGenerator.Data.Models
     {
         [JsonPropertyName("nodes")]
         public Dictionary<string, PassiveSkill> PassiveSkills { get; set; }
+
+        [JsonPropertyName("jewelSlots")]
+        public IReadOnlyList<uint> JewelSlots { get; set; }
     }
 }

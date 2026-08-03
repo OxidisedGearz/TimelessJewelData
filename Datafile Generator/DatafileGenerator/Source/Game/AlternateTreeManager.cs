@@ -31,6 +31,9 @@ public class AlternateTreeManager
 
     public bool IsPassiveSkillReplaced()
     {
+        if (PassiveSkillType == PassiveSkillType.AscendancyNotable)
+            return true;
+
         if (PassiveSkill.IsKeyStone)
             return true;
 
@@ -54,6 +57,13 @@ public class AlternateTreeManager
 
     public uint GetRegularPassiveSkillIndex(uint alternatePassiveSkillOffset)
     {
+        if (PassiveSkillType == PassiveSkillType.AscendancyNotable)
+        {
+            RandomNumberGenerator ascendancyRandomNumberGenerator = new RandomNumberGenerator(PassiveSkill, TimelessJewel);
+            AlternatePassiveSkill ascendancyReplacement = RollAlternatePassiveSkill(ascendancyRandomNumberGenerator);
+            return (ascendancyReplacement.Index + alternatePassiveSkillOffset);
+        }
+
         if (PassiveSkill.IsKeyStone)
         {
             AlternatePassiveSkill alternatePassiveSkillKeyStone = DataManager.GetAlternatePassiveSkillKeyStone(TimelessJewel);

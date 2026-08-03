@@ -19,6 +19,8 @@ public static class DataManager
     public static IReadOnlyCollection<AlternateTreeVersion> AlternateTreeVersions { get; private set; }
 
     public static IReadOnlyCollection<PassiveSkill> PassiveSkills { get; private set; }
+    public static IReadOnlyDictionary<uint, PassiveSkill> PassiveSkillsByGraphIdentifier { get; private set; }
+    public static IReadOnlyList<PassiveSkill> BaseJewelSockets { get; private set; }
     private static IReadOnlyDictionary<(uint alternateTreeVersionIndex, PassiveSkillType passiveSkillType), IReadOnlyList<AlternatePassiveAddition>> AlternatePassiveAdditionsLookup { get; set; }
     private static IReadOnlyDictionary<(uint alternateTreeVersionIndex, PassiveSkillType passiveSkillType), uint> AlternatePassiveAdditionSpawnWeightLookup { get; set; }
     private static IReadOnlyDictionary<(uint alternateTreeVersionIndex, PassiveSkillType passiveSkillType), IReadOnlyList<AlternatePassiveSkill>> AlternatePassiveSkillsLookup { get; set; }
@@ -40,11 +42,17 @@ public static class DataManager
         if (treeDataFile == null || treeDataFile.PassiveSkills == null)
             return false;
         var treeData = treeDataFile.PassiveSkills;
-        treeData.Remove("root");
-        PassiveSkills = treeData.Values.ToList();
+        PassiveSkills = treeData.Values.Where(q => q.GraphIdentifier != 0).ToList();
+        PassiveSkillsByGraphIdentifier = PassiveSkills
+            .GroupBy(q => q.GraphIdentifier)
+            .ToDictionary(q => q.Key, q => q.First());
+        BaseJewelSockets = (treeDataFile.JewelSlots ?? Array.Empty<uint>())
+            .Select(GetPassiveSkill)
+            .Where(q => q != null && q.IsJewelSocket && !q.IsClusterExpansionSocket && !q.IsAscendancy)
+            .ToList();
         PassiveSkillTypesByGraphIdentifier = BuildPassiveSkillTypeLookup();
 
-        return !((AlternatePassiveAdditions == null) || (AlternatePassiveSkills == null) || (AlternateTreeVersions == null) || (PassiveSkills == null));
+        return !((AlternatePassiveAdditions == null) || (AlternatePassiveSkills == null) || (AlternateTreeVersions == null) || (PassiveSkills == null) || (PassiveSkillsByGraphIdentifier == null) || (BaseJewelSockets == null));
     }
 
     private static IReadOnlyCollection<AlternateTreeVersion> GetAlternateTrees() =>
@@ -119,8 +127,11 @@ public static class DataManager
 
     private static PassiveSkillType GetPassiveSkillTypeSlow(PassiveSkill passiveSkill)
     {
+        if (passiveSkill.IsAscendancy && passiveSkill.IsNotable)
+            return PassiveSkillType.AscendancyNotable;
+
         if (passiveSkill.IsJewelSocket)
-            return PassiveSkillType.JewelSocket;
+            return PassiveSkillType.None;
 
         if (passiveSkill.IsKeyStone)
             return PassiveSkillType.KeyStone;
@@ -132,6 +143,16 @@ public static class DataManager
             return PassiveSkillType.SmallAttribute;
 
         return PassiveSkillType.SmallNormal;
+    }
+
+    public static PassiveSkill GetPassiveSkill(uint graphIdentifier)
+    {
+        if (PassiveSkillsByGraphIdentifier != null &&
+            PassiveSkillsByGraphIdentifier.TryGetValue(graphIdentifier, out PassiveSkill passiveSkill))
+        {
+            return passiveSkill;
+        }
+        return null;
     }
 
     private static Dictionary<uint, PassiveSkillType> BuildPassiveSkillTypeLookup()

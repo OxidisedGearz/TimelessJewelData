@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Spectre.Console;
 using DatafileGenerator.Data;
@@ -32,6 +33,22 @@ public static class Program
     {
         Console.Title = $"{GeneratorSettings.ApplicationName} (v{GeneratorSettings.ApplicationVersion})";
         AnsiConsole.MarkupLine("Spinning up!");
+        IsInteractiveMode = args == null || args.Length == 0;
+        if (IsAbyssRangeExportRequested(args))
+        {
+            RunAbyssRangeExport(args);
+            return;
+        }
+        if (IsAbyssAscendancyInspectionRequested(args))
+        {
+            RunAbyssAscendancyInspection(args);
+            return;
+        }
+        if (IsAbyssInspectionRequested(args))
+        {
+            RunAbyssInspection(args);
+            return;
+        }
         if (IsHelpRequested(args))
         {
             PrintUsage();
@@ -116,6 +133,31 @@ public static class Program
                 sb.Append("return nodeIDList");
                 File.WriteAllText(Path.Combine(outputDir, LuaMappingFileName), sb.ToString());
                 sb.Clear();
+            }
+            //Abyss jewels use socket/path-aware formats introduced in 3.29.
+            else if (i >= 7 && i <= 10)
+            {
+                IReadOnlyDictionary<uint, byte> localIdMapping = GetGlobalToLocalIdMapping(i);
+                GetJewelTypeInfo(i, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+                dataBuffer = AbyssDataWriter.GenerateSocketDependent(
+                    i,
+                    jewelMin,
+                    jewelMax,
+                    jewelIncrement,
+                    NumAdditions,
+                    globalId => MapGlobalIdToLocalId(localIdMapping, i, globalId));
+            }
+            else if (i == 11)
+            {
+                IReadOnlyDictionary<uint, byte> localIdMapping = GetGlobalToLocalIdMapping(i);
+                GetJewelTypeInfo(i, out int jewelMin, out int jewelMax, out int jewelIncrement, out _);
+                dataBuffer = AbyssDataWriter.GeneratePathDependentChanges(
+                    i,
+                    jewelMin,
+                    jewelMax,
+                    jewelIncrement,
+                    NumAdditions,
+                    globalId => MapGlobalIdToLocalId(localIdMapping, i, globalId));
             }
             //non-glorious vanity logic
             else
@@ -500,6 +542,223 @@ public static class Program
         return new TimelessJewel(alternateTreeVersion, seed);
     }
 
+    private static bool IsAbyssInspectionRequested(string[] args) =>
+        args != null && args.Length > 0 && string.Equals(args[0], "--inspect-abyss", StringComparison.OrdinalIgnoreCase);
+
+    private static bool IsAbyssRangeExportRequested(string[] args) =>
+        args != null && args.Length > 0 && string.Equals(args[0], "--export-abyss-range", StringComparison.OrdinalIgnoreCase);
+
+    private static void RunAbyssRangeExport(string[] args)
+    {
+        if (args.Length != 8 && args.Length != 9)
+        {
+            ExitWithError("Abyss range export requires: --export-abyss-range <additions.json> <skills.json> <tree.json> <outputFile> <jewelType> <seedMin> <seedMax> [compressed]");
+            return;
+        }
+        bool compressed = args.Length == 9;
+        if (compressed && !string.Equals(args[8], "compressed", StringComparison.OrdinalIgnoreCase))
+        {
+            ExitWithError("The optional Abyss range export mode must be 'compressed'.");
+            return;
+        }
+        GeneratorSettings.AlternatePassiveAdditionsFilePath = args[1];
+        GeneratorSettings.AlternatePassiveSkillsFilePath = args[2];
+        GeneratorSettings.PassiveSkillsFilePath = args[3];
+        if (!int.TryParse(args[5], out int jewelType) || jewelType < 7 || jewelType > 11)
+        {
+            ExitWithError("Abyss range export jewelType must be from 7 through 11.");
+            return;
+        }
+        if (!int.TryParse(args[6], out int seedMinimum) || !int.TryParse(args[7], out int seedMaximum) ||
+            seedMinimum < 100 || seedMaximum > 8000 || seedMinimum > seedMaximum)
+        {
+            ExitWithError("Abyss range export seeds must satisfy 100 <= seedMin <= seedMax <= 8000.");
+            return;
+        }
+        if (!DataManager.Initialize())
+        {
+            ExitWithError("Failed to initialize the data manager for Abyss range export.");
+            return;
+        }
+        AlternateTreeVersionsByIndex = DataManager.AlternateTreeVersions.ToDictionary(q => q.Index);
+        NumAdditions = DataManager.AlternatePassiveAdditions.Count;
+        InitializeLocalIdMappings();
+        IReadOnlyDictionary<uint, byte> localIdMapping = GetGlobalToLocalIdMapping(jewelType);
+        byte[] output = jewelType == 11
+            ? AbyssDataWriter.GeneratePathDependentChanges(
+                jewelType, seedMinimum, seedMaximum, 1, NumAdditions,
+                globalId => MapGlobalIdToLocalId(localIdMapping, jewelType, globalId))
+            : AbyssDataWriter.GenerateSocketDependent(
+                jewelType, seedMinimum, seedMaximum, 1, NumAdditions,
+                globalId => MapGlobalIdToLocalId(localIdMapping, jewelType, globalId));
+        if (compressed)
+            output = Compress(output);
+        string outputPath = Path.GetFullPath(args[4]);
+        string outputDirectory = Path.GetDirectoryName(outputPath);
+        if (!string.IsNullOrEmpty(outputDirectory))
+            Directory.CreateDirectory(outputDirectory);
+        File.WriteAllBytes(outputPath, output);
+        Console.WriteLine($"Wrote {output.Length} bytes{(compressed ? " (zlib compressed)" : string.Empty)} to {outputPath}");
+    }
+
+    private static bool IsAbyssAscendancyInspectionRequested(string[] args) =>
+        args != null && args.Length > 0 && string.Equals(args[0], "--inspect-abyss-ascendancy", StringComparison.OrdinalIgnoreCase);
+
+    private static void RunAbyssAscendancyInspection(string[] args)
+    {
+        if (args.Length != 6)
+        {
+            ExitWithError("Ascendancy inspection requires: --inspect-abyss-ascendancy <additions.json> <skills.json> <tree.json> <seed> <ascendancyName>");
+            return;
+        }
+        GeneratorSettings.AlternatePassiveAdditionsFilePath = args[1];
+        GeneratorSettings.AlternatePassiveSkillsFilePath = args[2];
+        GeneratorSettings.PassiveSkillsFilePath = args[3];
+        if (!uint.TryParse(args[4], out uint seed) || seed < 100 || seed > 8000)
+        {
+            ExitWithError("Ascendancy inspection seed must be from 100 through 8000.");
+            return;
+        }
+        if (!DataManager.Initialize())
+        {
+            ExitWithError("Failed to initialize the data manager for ascendancy inspection.");
+            return;
+        }
+        AlternateTreeVersionsByIndex = DataManager.AlternateTreeVersions.ToDictionary(q => q.Index);
+        TimelessJewel jewel = GetTimelessJewel(seed, 11);
+        AbyssAscendancyManager ascendancyManager = new AbyssAscendancyManager();
+        IReadOnlyList<PassiveSkill> selected = ascendancyManager.SelectAffectedNotables(args[5], seed);
+        object output = new
+        {
+            Seed = seed,
+            Ascendancy = args[5],
+            Selected = selected.Select(q =>
+            {
+                AlternatePassiveSkillInformation replacement = new AlternateTreeManager(q, jewel).ReplacePassiveSkill();
+                return new
+                {
+                    q.GraphIdentifier,
+                    q.Name,
+                    AlternatePassiveId = replacement.AlternatePassiveSkill.Id,
+                    AlternatePassiveName = replacement.AlternatePassiveSkill.Name,
+                    Stats = BuildStatRolls(replacement.AlternatePassiveSkill.StatIndices, replacement.StatRolls)
+                };
+            }).ToArray()
+        };
+        Console.WriteLine(JsonSerializer.Serialize(output, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+
+    private static void RunAbyssInspection(string[] args)
+    {
+        const int expectedInspectionArgumentCount = 7;
+        if (args.Length != expectedInspectionArgumentCount)
+        {
+            ExitWithError("Abyss inspection requires: --inspect-abyss <additions.json> <skills.json> <tree.json> <jewelType> <seed> <socketGraphId>");
+            return;
+        }
+
+        GeneratorSettings.AlternatePassiveAdditionsFilePath = args[1];
+        GeneratorSettings.AlternatePassiveSkillsFilePath = args[2];
+        GeneratorSettings.PassiveSkillsFilePath = args[3];
+        if (!uint.TryParse(args[4], out uint jewelType) || jewelType < 7 || jewelType > 11)
+        {
+            ExitWithError("Abyss inspection jewelType must be from 7 through 11.");
+            return;
+        }
+        if (!uint.TryParse(args[5], out uint seed) || seed < 100 || seed > 8000)
+        {
+            ExitWithError("Abyss inspection seed must be from 100 through 8000.");
+            return;
+        }
+        if (!uint.TryParse(args[6], out uint socketGraphIdentifier))
+        {
+            ExitWithError("Abyss inspection socketGraphId must be an unsigned integer.");
+            return;
+        }
+
+        if (!DataManager.Initialize())
+        {
+            ExitWithError("Failed to initialize the data manager for Abyss inspection.");
+            return;
+        }
+        AlternateTreeVersionsByIndex = DataManager.AlternateTreeVersions.ToDictionary(q => q.Index);
+
+        TimelessJewel timelessJewel = GetTimelessJewel(seed, jewelType);
+        IReadOnlyList<PassiveSkill> affectedPassives;
+        if (jewelType == 11)
+        {
+            PassiveSkill passiveSkill = DataManager.GetPassiveSkill(socketGraphIdentifier);
+            if (passiveSkill == null)
+            {
+                ExitWithError($"No passive exists with graph identifier {socketGraphIdentifier}.");
+                return;
+            }
+            affectedPassives = new PassiveSkill[] { passiveSkill };
+        }
+        else
+        {
+            AbyssTreeManager abyssTreeManager = new AbyssTreeManager();
+            affectedPassives = abyssTreeManager.SelectAffectedPassives(socketGraphIdentifier, seed);
+        }
+        List<object> changes = new List<object>(affectedPassives.Count);
+
+        foreach (PassiveSkill passiveSkill in affectedPassives)
+        {
+            AlternateTreeManager alternateTreeManager = new AlternateTreeManager(passiveSkill, timelessJewel);
+            if (alternateTreeManager.IsPassiveSkillReplaced())
+            {
+                AlternatePassiveSkillInformation replacement = alternateTreeManager.ReplacePassiveSkill();
+                changes.Add(new
+                {
+                    passiveSkill.GraphIdentifier,
+                    passiveSkill.Name,
+                    PassiveType = DataManager.GetPassiveSkillType(passiveSkill).ToString(),
+                    ChangeType = "Replacement",
+                    AlternatePassiveId = replacement.AlternatePassiveSkill.Id,
+                    AlternatePassiveName = replacement.AlternatePassiveSkill.Name,
+                    Stats = BuildStatRolls(replacement.AlternatePassiveSkill.StatIndices, replacement.StatRolls)
+                });
+            }
+            else
+            {
+                IReadOnlyList<AlternatePassiveAdditionInformation> additions = alternateTreeManager.AugmentPassiveSkill();
+                changes.Add(new
+                {
+                    passiveSkill.GraphIdentifier,
+                    passiveSkill.Name,
+                    PassiveType = DataManager.GetPassiveSkillType(passiveSkill).ToString(),
+                    ChangeType = "Addition",
+                    Additions = additions.Select(q => new
+                    {
+                        AlternatePassiveId = q.AlternatePassiveAddition.Id,
+                        Stats = BuildStatRolls(q.AlternatePassiveAddition.StatIndices, q.StatRolls)
+                    }).ToArray()
+                });
+            }
+        }
+
+        object output = new
+        {
+            JewelType = jewelType,
+            Seed = seed,
+            InputGraphIdentifier = socketGraphIdentifier,
+            AffectedCount = affectedPassives.Count,
+            AffectedGraphIdentifiers = affectedPassives.Select(q => q.GraphIdentifier).ToArray(),
+            Changes = changes
+        };
+        Console.WriteLine(JsonSerializer.Serialize(output, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+
+    private static object[] BuildStatRolls(IReadOnlyCollection<uint> statIndices, IReadOnlyList<int> statRolls)
+    {
+        uint[] indices = statIndices?.ToArray() ?? Array.Empty<uint>();
+        int count = Math.Min(indices.Length, statRolls.Count);
+        object[] result = new object[count];
+        for (int i = 0; i < count; i++)
+            result[i] = new { StatIndex = indices[i], Roll = statRolls[i] };
+        return result;
+    }
+
     private static bool TryParseCommandLineArguments(string[] args, out string outputDir, out int compression, out string error)
     {
         outputDir = null;
@@ -597,6 +856,11 @@ public static class Program
         AnsiConsole.WriteLine("Usage:");
         AnsiConsole.WriteLine("  DataFileGenerator <alternate_additions_json> <alternate_skills_json> <skill_tree_json> <output_dir> <output_type>");
         AnsiConsole.WriteLine("  output_type: compressed | uncompressed | both | 1 | 2 | 3");
+        AnsiConsole.WriteLine();
+        AnsiConsole.WriteLine("Abyss diagnostics:");
+        AnsiConsole.WriteLine("  DataFileGenerator --inspect-abyss <additions_json> <skills_json> <tree_json> <jewel_type> <seed> <socket_or_node_id>");
+        AnsiConsole.WriteLine("  DataFileGenerator --inspect-abyss-ascendancy <additions_json> <skills_json> <tree_json> <seed> <ascendancy_name>");
+        AnsiConsole.WriteLine("  DataFileGenerator --export-abyss-range <additions_json> <skills_json> <tree_json> <output_file> <jewel_type> <seed_min> <seed_max> [compressed]");
     }
 
     private static void WaitForExit(int exitCode = 0)

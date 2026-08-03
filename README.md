@@ -94,9 +94,74 @@ take a random node, lets say lethal pride, Lava Lash, seed 10116 (as it ends up 
 
 # Generating the data files
 
-Datafiles are generated using the DatafileGeneartor (a visual studio project, C#).    
-It's built on top of a timeless jewel simulator, so its not very consice, but the meat of the file format logic is in program.cs while the rest is just modelling the prng and parsing jsons.    
+Datafiles are generated using the DatafileGenerator (a Visual Studio project, C#).
+It's built on top of a timeless jewel simulator, so the core file-format logic is in `Program.cs` while the rest models the PRNG and parses JSON data.
 
 It will need an alternate passive additions json, an alternate passive skills json, and the most recent skill tree json. You'll also have to tell it where to output and whether you want the compressed or uncompressed files.    
 
-Running it will output 5 datafiles, 1 lua file, and 1 csv file (note that if compressed, the Glorious Vanity "file" will actually come out to be multiple files each with size at most 5MB due to the limitations within Path of Building).
+Running it will output all 11 jewel datafiles, 1 lua file, and 1 csv file (note that compressed files larger than 5MB are split into multiple parts due to limitations within Path of Building).
+
+## Abyss timeless jewels (versions 7-11)
+
+The Abyss jewels introduced in 3.29 cannot use the original notable-by-seed layout:
+
+- Versions 7-10 select 60 graph entries with a weighted walk starting at the jewel socket. Their output therefore depends on both the seed and socket.
+- Version 11 transforms nodes on the path from the socket to the character start. The path itself is deliberately not stored because Path of Building already calculates it. Its extra ascendancy selection is stored per seed and ascendancy.
+
+All integer fields below are little-endian. Stat rolls are signed 16-bit integers; negative rolls must not be read as unsigned values.
+
+### Common header
+
+| Field | Type | Description |
+| --- | --- | --- |
+| magic | 4 bytes | `ABYS` for versions 7-10 or `ABYN` for version 11 |
+| formatVersion | uint8 | Currently 1 |
+| jewelType | uint8 | Alternate tree version, 7 through 11 |
+| seedMinimum | uint16 | First stored seed |
+| seedMaximum | uint16 | Last stored seed |
+| seedIncrement | uint16 | Seed step |
+
+### `ABYS` socket-dependent body (versions 7-10)
+
+The common header is followed by `socketCount` (uint8), `abyssSize` (uint8), and `socketCount` graph IDs (uint16). The socket IDs are sorted numerically and include all 21 sockets on the base passive tree, including the six Large Jewel Sockets.
+
+Records then appear socket-major and seed-minor. For every socket and seed:
+
+1. Read `affectedNodeCount` (uint8).
+2. For each affected node, read its graph ID (uint16), then one modification record as described below.
+
+Nodes which consume a walk selection but cannot be transformed are omitted from `affectedNodeCount`.
+
+### `ABYN` path-dependent body (version 11)
+
+The common header is followed by `nodeCount` (uint16) and `nodeCount` sorted graph IDs (uint16). Modification records then appear node-major and seed-minor. Use PoB's socket-to-character-start path to choose which node records apply.
+
+After the node records is the ASCII marker `ASCS`, followed by `ascendancyCount` (uint16). Each ascendancy block contains:
+
+1. UTF-8 name length (uint8) and name bytes.
+2. For every seed, selected node count (uint8) followed by that many graph IDs (uint16).
+
+### Modification records
+
+Each modification begins with `componentCount` (uint8). Each component contains:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| componentType | uint8 | 1 = replacement, 2 = addition |
+| localId | uint8 | Jewel-local change ID |
+| statCount | uint8 | Number of following rolls |
+| statRolls | int16[] | One signed value per stat |
+
+`NodeIndexMapping.lua` contains `localIdToGlobalId[jewelType]`, which maps `localId` back to the `_rid`-based global IDs used by `AlternatePassiveAdditions.json` and `AlternatePassiveSkills.json`.
+
+### Focused inspection and range export
+
+The generator has non-interactive commands for checking observed game examples without generating every seed:
+
+```text
+DataFileGenerator --inspect-abyss <additions.json> <skills.json> <tree.json> <jewelType> <seed> <socketOrNodeId>
+DataFileGenerator --inspect-abyss-ascendancy <additions.json> <skills.json> <tree.json> <seed> <ascendancyName>
+DataFileGenerator --export-abyss-range <additions.json> <skills.json> <tree.json> <outputFile> <jewelType> <seedMin> <seedMax> [compressed]
+```
+
+For versions 7-10, `socketOrNodeId` is a jewel socket and inspection prints every affected node. For version 11 it is a single path or ascendancy node whose transformation should be inspected. Supplying `compressed` writes the range as the zlib stream conventionally given a `.zip` extension by PoB.

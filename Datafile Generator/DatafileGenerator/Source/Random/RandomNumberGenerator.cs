@@ -23,6 +23,12 @@ public class RandomNumberGenerator
         Initialize(passiveSkill.GraphIdentifier, timelessJewel.Seed);
     }
 
+    public RandomNumberGenerator(uint seed0, uint seed1)
+    {
+        state = default;
+        Initialize(seed0, seed1);
+    }
+
     private static uint ManipulateAlpha(uint value)
     {
         return ((value ^ (value >> 27)) * 0x19660D);
@@ -35,20 +41,21 @@ public class RandomNumberGenerator
 
     public uint Generate(uint exclusiveMaximumValue)
     {
-        uint maximumValue = (exclusiveMaximumValue - 1);
-        uint roundState = 0;
-        uint value = 0;
+        if (exclusiveMaximumValue == 0)
+            throw new ArgumentOutOfRangeException(nameof(exclusiveMaximumValue));
+        if (exclusiveMaximumValue == 1)
+            return 0;
 
+        // Reject the incomplete range at the top of uint32 before applying the
+        // modulo. Using ulong here lets the exact 2^32 boundary be represented.
+        ulong limit = (1UL << 32) / exclusiveMaximumValue * exclusiveMaximumValue;
+        uint value;
         do
         {
-            do
-            {
-                value = (GenerateUInt() | (2 * (value << 31)));
-                roundState = (0xFFFFFFFF | (2 * (roundState << 31)));
-            } while (roundState < maximumValue);
-        } while (((value / exclusiveMaximumValue) >= roundState) && ((roundState % exclusiveMaximumValue) != maximumValue));
+            value = GenerateUInt();
+        } while ((ulong)value >= limit);
 
-        return (value % exclusiveMaximumValue);
+        return value % exclusiveMaximumValue;
     }
 
     public uint Generate(uint minimumValue, uint maximumValue)
