@@ -1,3 +1,7 @@
+Abyss jewel update: Subtractem worked to find out how the jewel worked, and told LocalIdentity, who added it to their datafile generator. Props to them!
+
+After comparing my fork with theirs, theirs is cleaner and has more features, so I'm just resetting hard on their current commit.
+
 # Using the data files
 
 ### Parsing Brutal Restraint, Elegant Hubris, Lethal Pride, and Militant Faith
